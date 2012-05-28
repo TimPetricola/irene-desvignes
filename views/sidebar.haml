@@ -1,5 +1,5 @@
 %aside#sidebar
-  %h1
+  %h1#header
     %a{:href => '/' }
       %span.firstname
         Irène
@@ -10,16 +10,21 @@
     = r18n.available_locales.map {|locale| "<a href='/?lang=#{locale.code}'>#{locale.title}</a>"} .join(', ')
 
   %nav#navigation
-    %ul
+    %ul.main
       %li
-        %a{:href => '#'}= t.navigation.home
+        %a{:href => '#home'}= t.navigation.home
       %li
-        %a{:href => '#'}= t.navigation.work
+        %a{:href => '#work'}= t.navigation.work
+        %ul
+          - @works.each do |slug, work|
+            %li
+              %a.work{:href => "##{slug}"}= work[:name]
+
       %li
-        %a{:href => '#'}= t.navigation.press
+        %a{:href => '#press'}= t.navigation.press
       %li
-        %a{:href => '#'}= t.navigation.exhibitions
+        %a{:href => '#exhibitions'}= t.navigation.exhibitions
       %li
-        %a{:href => '#'}= t.navigation.background
+        %a{:href => '#background'}= t.navigation.background
       %li
-        %a{:href => '#'}= t.navigation.contact
+        %a{:href => '#contact'}= t.navigation.contact
