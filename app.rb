@@ -43,6 +43,14 @@ get '/' do
     ]
   }
 
+  @works['autoportraits'] = {
+    :name => "Autoportraits",
+    :images =>
+    [
+      ['1.jpg', '2.jpg', '3.jpg']
+    ]
+  }
+
   @works['eau'] = {
     :name => "Le bord de l'eau",
     :images =>
@@ -52,10 +60,25 @@ get '/' do
     ]
   }
 
+  @works['dialogues'] = {
+    :name => "Dialogues",
+    :images =>
+    [
+      ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+      ['5.jpg', '6.jpg', '7.jpg', '8.jpg'],
+      ['9.jpg']
+    ]
+  }
 
-  #@works['Autoportraits'] = {}
-  #@works["Le bord de l'eau"] = {}
-  #@works['Dialogues'] = {}
-  #@works['Géo-graphies'] = {}
+  @works['geographies'] = {
+    :name => "Géo-graphies",
+    :images =>
+    [
+      ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+      ['5.jpg', '6.jpg', '7.jpg'],
+      ['8.jpg', '9.jpg', '10.jpg']
+    ]
+  }
+
   haml :index
 end

@@ -3,6 +3,6 @@
     .works-list{:id => slug}
       -work[:images].each do |line|
         - line.each do |image|
-          %a{:href => "/images/#{slug}/#{image}"}
-            %img{:src => "/images/#{slug}/#{image}"}
+          %a{:href => "/images/works/#{slug}/#{image}"}
+            %img{:src => "/images/works/#{slug}/thumbs/#{image}"}
         %br
