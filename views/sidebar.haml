@@ -7,7 +7,7 @@
         Desvignes
   
   #lang
-    = r18n.available_locales.map {|locale| "<a href='/?lang=#{locale.code}'>#{locale.title}</a>"} .join(', ')
+    = {:fr => 'Français', :en => 'English', :it => 'Italiano'}.map {|code, title| "<a href='/?lang=#{code}'>#{title}</a>"} .join(', ')
 
   %nav#navigation
     %ul.main
