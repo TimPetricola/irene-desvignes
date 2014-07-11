@@ -1,30 +1,30 @@
 %aside#sidebar
   %h1#header
-    %a{:href => '/' }
+    %a{href: '/' }
       %span.firstname
         Irène
       %span.lastname
         Desvignes
-  
+
   #lang
-    = {:fr => 'Français', :en => 'English', :it => 'Italiano'}.map {|code, title| "<a href='/?lang=#{code}'>#{title}</a>"} .join(', ')
+    = {fr: 'Français', en: 'English', it: 'Italiano'}.map {|code, title| "<a href='/?lang=#{code}'>#{title}</a>"} .join(', ')
 
   %nav#navigation
     %ul.main
       %li
-        %a{:href => '#home'}= t.navigation.home
+        %a{href: '#home'}= t.navigation.home
       %li
-        %a{:href => '#work'}= t.navigation.work
+        %a{href: '#work'}= t.navigation.work
         %ul
           - @works.each do |slug, work|
             %li
-              %a.work{:href => "##{slug}"}= work[:name]
+              %a.work{href: "##{slug}"}= work[:name]
 
       %li
-        %a{:href => '#press'}= t.navigation.press
+        %a{href: '#press'}= t.navigation.press
       %li
-        %a{:href => '#exhibitions'}= t.navigation.exhibitions
+        %a{href: '#exhibitions'}= t.navigation.exhibitions
       %li
-        %a{:href => '#background'}= t.navigation.background
+        %a{href: '#background'}= t.navigation.background
       %li
-        %a{:href => '#contact'}= t.navigation.contact
+        %a{href: '#contact'}= t.navigation.contact
