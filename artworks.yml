@@ -7,17 +7,20 @@ series:
       - [5, 6, 7, 8]
       - [9, 10, 11]
       - [12, 13, 14]
+
   -
     slug: autoportraits
     name: Autoportraits
     images:
       - [1, 2, 3]
+
   -
     slug: eau
     name: Le bord de l'eau
     images:
       - [1, 2, 3, 4]
       - [5, 6, 7]
+
   -
     slug: dialogues
     name: Dialogues
@@ -25,6 +28,7 @@ series:
       - [1, 2, 3, 4]
       - [5, 6, 7, 8]
       - [9]
+
   -
     slug: geographies
     name: Géo-graphies
@@ -32,3 +36,45 @@ series:
       - [1, 2, 3, 4]
       - [5, 7, 6]
       - [8, 9, 10]
+
+  -
+    slug: lago-verde
+    name: Lago Verde
+    images:
+      - [1, 2, 3, 4]
+
+  -
+    slug: ilots-zen
+    name: Ilots Zen
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6]
+
+  -
+    slug: paysages-lanzarotte
+    name: Paysages Lanzarotte
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7, 8]
+      - [9, 10]
+
+  -
+    slug: cartographie-sejours
+    name: Cartographie des Séjours
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7, 8]
+      - [9, 10, 11, 12]
+
+  -
+    slug: isola-lobos
+    name: Isola des Lobos
+    images:
+      - [1, 2]
+
+  -
+    slug: petits-volcans-apprivoises
+    name: Petis Volcans Apprivoisés
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7]
