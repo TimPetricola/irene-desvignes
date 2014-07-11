@@ -16,9 +16,9 @@
       %li
         %a{href: '#work'}= t.navigation.work
         %ul
-          - @works.each do |slug, work|
+          - @series.each do |serie|
             %li
-              %a.work{href: "##{slug}"}= work[:name]
+              %a.work{href: "##{serie['slug']}"}= serie['name']
 
       %li
         %a{href: '#press'}= t.navigation.press
