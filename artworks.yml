@@ -1,43 +1,5 @@
 series:
   -
-    slug: jardins
-    name: Jardins au feminin
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7, 8]
-      - [9, 10, 11]
-      - [12, 13, 14]
-
-  -
-    slug: autoportraits
-    name: Autoportraits
-    images:
-      - [1, 2, 3]
-
-  -
-    slug: eau
-    name: Le bord de l'eau
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7]
-
-  -
-    slug: dialogues
-    name: Dialogues
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7, 8]
-      - [9]
-
-  -
-    slug: geographies
-    name: Géo-graphies
-    images:
-      - [1, 2, 3, 4]
-      - [5, 7, 6]
-      - [8, 9, 10]
-
-  -
     slug: lago-verde
     name: Lago Verde
     images:
@@ -78,3 +40,42 @@ series:
     images:
       - [1, 2, 3, 4]
       - [5, 6, 7]
+
+  -
+    slug: jardins
+    name: Jardins au feminin
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7, 8]
+      - [9, 10, 11]
+      - [12, 13, 14]
+
+  -
+    slug: autoportraits
+    name: Autoportraits
+    images:
+      - [1, 2, 3]
+
+  -
+    slug: eau
+    name: Le bord de l'eau
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7]
+
+  -
+    slug: dialogues
+    name: Dialogues
+    images:
+      - [1, 2, 3, 4]
+      - [5, 6, 7, 8]
+      - [9]
+
+  -
+    slug: geographies
+    name: Géo-graphies
+    images:
+      - [1, 2, 3, 4]
+      - [5, 7, 6]
+      - [8, 9, 10]
+
