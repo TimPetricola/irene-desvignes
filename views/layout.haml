@@ -4,6 +4,7 @@
     %meta{charset: 'utf-8'}
     %title Irène Desvignes
     %link{type: 'text/css', rel: 'stylesheet', href: 'application.css'}
+    %link{type: 'text/css', rel: 'stylesheet', href: 'lightbox.css'}
   %body
     #container
       = partial :sidebar
@@ -11,4 +12,5 @@
         = yield
 
   %script{src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'}
+  %script{src: 'lightbox.js'}
   %script{src: 'application.js'}

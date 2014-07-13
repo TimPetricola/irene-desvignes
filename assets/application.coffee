@@ -17,7 +17,7 @@ $nav.find('a:not(.work)').on 'click', (e) ->
   $link.addClass('active')
   $link.parent('li').find('ul').slideDown()
 
-  
+
   $page = $($link.attr('href'))
 
   $works.hide()
@@ -38,17 +38,3 @@ $nav.find('a.work').on 'click', (e) ->
 
   $works.hide()
   $work.show()
-
-$('.works-list').find('a').on 'click', (e) ->
-  e.preventDefault()
-
-  href = $(this).attr('href')
-  if $('#lightbox').length > 0
-    $('#content').html "<img src='#{href}'>"
-    $('#lightbox').show()
-  else
-    lightbox = "<div id=\"lightbox\">" + "<p>Click to close</p>" + "<div id=\"content\">" + "<img src=\"" + href + "\" />" + "</div>" + "</div>"
-    $('body').append lightbox
-
-$('#lightbox').live 'click', (e) ->
-  $(this).hide()
