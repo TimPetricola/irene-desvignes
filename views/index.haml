@@ -1,4 +1,6 @@
 = partial :"pages/home"
+- if session[:locale] == 'fr'
+  = partial :"pages/marks"
 = partial :"pages/works"
 = partial :"pages/press"
 = partial :"pages/exhibitions"

@@ -13,6 +13,9 @@
     %ul.main
       %li
         %a{href: '#home'}= t.navigation.home
+      - if session[:locale] == 'fr'
+        %li
+          %a{href: '#marks'}= t.navigation.marks
       %li
         %a{href: '#work'}= t.navigation.work
         %ul
