@@ -7,14 +7,12 @@ require 'sass'
 require 'coffee-script'
 require 'sinatra/r18n'
 
+R18n::I18n.default = 'fr'
+
 helpers do
   def partial(page, options={})
     haml(page, options.merge!(layout: false))
   end
-end
-
-before do
-  session[:locale] = params[:lang] if params[:lang]
 end
 
 get '/application.js' do
