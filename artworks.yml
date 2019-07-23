@@ -1,45 +1,20 @@
 series:
   -
-    slug: lago-verde
-    name: Lago Verde
+    slug: iles
+    name: Îles
     images:
-      - [1, 3, 2, 4]
-
-  -
-    slug: ilots-zen
-    name: Ilots Zen
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6]
-
-  -
-    slug: paysages-lanzarote
-    name: Paysages Lanzarote
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7, 8]
-      - [9, 10, 11]
-
-  -
-    slug: cartographie-sejours
-    name: Cartographie des Séjours
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7, 8]
-      - [9, 10, 11, 12]
-
-  -
-    slug: isola-lobos
-    name: Isola des Lobos
-    images:
-      - [1, 2]
-
-  -
-    slug: petits-volcans-apprivoises
-    name: Petis Volcans Apprivoisés
-    images:
-      - [1, 2, 3, 4]
-      - [5, 6, 7]
+      - ["lago-verde-1", "lago-verde-3", "lago-verde-2", "lago-verde-4"]
+      - ["isola-lobos-1", "isola-lobos-2"]
+      - ["paysages-lanzarote-1", "paysages-lanzarote-2", "paysages-lanzarote-3", "paysages-lanzarote-4"]
+      - ["paysages-lanzarote-5", "paysages-lanzarote-6", "paysages-lanzarote-7", "paysages-lanzarote-8"]
+      - ["paysages-lanzarote-9", "paysages-lanzarote-10", "paysages-lanzarote-11"]
+      - ["ilots-zen-1", "ilots-zen-2", "ilots-zen-3", "ilots-zen-4"]
+      - ["ilots-zen-5", "ilots-zen-6"]
+      - ["cartographie-sejours-1", "cartographie-sejours-2", "cartographie-sejours-3", "cartographie-sejours-4"]
+      - ["cartographie-sejours-5", "cartographie-sejours-6", "cartographie-sejours-7", "cartographie-sejours-8"]
+      - ["cartographie-sejours-9", "cartographie-sejours-10", "cartographie-sejours-11", "cartographie-sejours-12"]
+      - ["petits-volcans-apprivoises-1", "petits-volcans-apprivoises-2", "petits-volcans-apprivoises-3", "petits-volcans-apprivoises-4"]
+      - ["petits-volcans-apprivoises-5", "petits-volcans-apprivoises-6", "petits-volcans-apprivoises-7"]
 
   -
     slug: jardins
@@ -79,4 +54,3 @@ series:
       - [1, 2, 3, 4]
       - [5, 7, 6]
       - [8, 9, 10]
-
