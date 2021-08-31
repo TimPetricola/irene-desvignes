@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import SimpleReactLightbox from "simple-react-lightbox";
 import artworks from "../artworks.json";
 
-import "../../assets/application.sass";
+import "../styles/application.sass";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
