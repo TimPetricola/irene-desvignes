@@ -30,8 +30,15 @@ const Works: NextPage<Props> = ({ serie }) => {
         {serie.images.map((row, index) => (
           <div key={index}>
             {row.map((image) => (
-              <a href={`/images/works/${serie.slug}/${image}.jpg`} key={image}>
-                <img src={`/images/works/${serie.slug}/thumbs/${image}.jpg`} />
+              <a
+                href={`/images/works/${serie.slug}/${image}.jpg`}
+                key={image}
+                className="works-list-thumb"
+              >
+                <img
+                  src={`/images/works/${serie.slug}/thumbs/${image}.jpg`}
+                  className="works-list-img"
+                />
               </a>
             ))}
           </div>

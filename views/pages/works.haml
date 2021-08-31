@@ -1,8 +1,0 @@
-%sections#works
-  - @series.each do |serie|
-    .works-list{id: serie['slug']}
-      - serie['images'].each do |line|
-        - line.each do |image|
-          %a{href: "/images/works/#{serie['slug']}/#{image}.jpg?v=#{ENV['IMAGE_VERSION']}", 'data-lightbox' => serie['slug']}
-            %img{src: "/images/works/#{serie['slug']}/thumbs/#{image}.jpg?v=#{ENV['IMAGE_VERSION']}"}
-        %br
