@@ -1,0 +1,164 @@
+const Press = () => {
+  return (
+    <section>
+      <h2>Irène Desvignes : D’îles en elle</h2>
+      <p>
+        Du rose, du bleu, un lac vert, des îles, une cartographie imagée en
+        guise de « petite cosmogonie portative » autobiographique… tel est à peu
+        près l’univers d’Irène Desvignes.
+        <br />
+        Au bout de ses Beaux arts à Lyon et d’une trentaine d’années de
+        peinture, elle évolue dans ses rêves, ses souvenirs, son imaginaire ; et
+        ses tableaux comme ses sculptures en céramique racontent chacun une
+        histoire, déroulent une saynète.
+        <br />
+        Elle flotte au milieu de poissons phalliques. Elle caresse des
+        cratères-lunes ou vulves ; ses petits volcans apprivoisés. Elle évoque.
+        <br />
+        Des fruits s’isolent du fond pour rendre hommage à Cézanne, à une
+        tradition picturale ainsi que, tout simplement, à la nature édénique. Ce
+        sont ses îles oniriques, c’est à dire ses escales dans un vaste océan
+        qui pourrait être celui de sa vie, c’est à dire ses elles.
+        <br />
+        Il lui faut peut être en faire ses ailes pour planer dans la
+        transparence, flâner sur les chemins du fur et à mesure, à sa façon
+        impulsive et non intellectualisée, dans une énergique dynamique
+        gestuelle.
+        <br />
+        S’en échapper aussi puisque, plus Irène Desvignes avance, plus elle
+        semble aller vers des formes géométriques qui naissent, s’entrechoquent,
+        s’envolent vers une forme d’abstraction presque naïve et très colorée.
+        Pas la géométrie radicale, pas la couleur pure, mais l’évanescence, la
+        tendresse aussi, peut-être.
+        <br />
+        Les îles grecques, Lanzarote aux Canaries, la Bretagne, les petits
+        formats comme les grands, constituent les pièces d’un puzzle, les
+        fragments d’un récit, souvent chargés de symboles et de métaphores qui,
+        d’îles en elle, de reprises en remaniements, l’amènent vers l’épure du
+        blanc.
+      </p>
+      <p className="signature">Stani Chaine, Mars 2015</p>
+      <hr />
+      <div className="center">
+        <iframe
+          allowFullScreen
+          frameBorder={0}
+          width={480}
+          height={390}
+          src="http://www.youtube.com/embed/OMHm_88Hyf8"
+        />
+      </div>
+      <hr />
+      <p>
+        « A la lisière de la forêt, - les fleurs de rêve tintent, éclatent,
+        éclairent, - la fille à lèvre d'orange, les genoux croisés dans le clair
+        déluge qui sourd des prés, nudité qu'ombrent, traversent et habillent
+        les arcs-en-ciel, la flore, la mer. » (Arthur Rimbaud in Enfance,
+        <span className="italic">Illuminations )</span>
+      </p>
+      <p>
+        Nous pourrions citer beaucoup Rimbaud pour évoquer les toiles d'Irène
+        Desvignes : de Sensation à Ophélie jusqu'aux Illuminations. Mais ce
+        court extrait d' « Enfance » semble à lui seul condenser bien des
+        thématiques, des motifs et des tonalités propres à l'artiste. Pêle-mêle
+        : l'eau, la mer, les fleurs, le féminin, la nudité, les couleurs claires
+        ou vives... Au bord de l'eau, au bord de soi, depuis quatre ans, Irène
+        Desvignes opère un retour sur son passé qui est aussi une exploration
+        d'elle-même et, de manière plus générale encore, de la féminité. Dans la
+        série d'autoportraits à la bouée rose par exemple, les joies de
+        l'enfance ressurgissent avec leur part de simplicité et de naïveté.
+        Mais, concomitamment, la maturité du corps est soulignée, traitée avec
+        plus de force et de dureté. La peinture d'Irène Desvignes est traversée
+        par un écart, fût-il discret. Ecart entre la sensation immédiate et la
+        conscience de soi, écart entre le souvenir et le présent, écart entre
+        des motifs d'allégresse et d'autres marquant davantage l'ambiguïté, le
+        doute, l'ironie...
+      </p>
+      <p>
+        Les grandes fleurs (anémones, narcisses...) d'Irène Desvignes tintent,
+        éclairent et éclatent à tel point qu'elles envahissent l'espace, en
+        distordent l'ordonnancement habituel. La peinture est figurative mais
+        aussi troublée esthétiquement par une imagination qui prend sa source
+        dans la matérialité des choses et tend à dissoudre les formes : buées,
+        vapeurs colorées, brumes, fluidités aquatiques, liquides parfois
+        amniotiques... L'eau et les rêves, l'air et les songes, notions chères à
+        Gaston Bachelard, enveloppent, emportent, délestent les figures.
+      </p>
+      <p>
+        Quand Irène Desvignes travaille, pour une série de tableaux, sur le Bain
+        turc d'Ingres, elle isole à chaque fois une figure féminine et déplie
+        ainsi de manière analytique cette formidable boîte à fantasmes
+        masculins. Elle démonte un processus pictural et, à la fois, déconstruit
+        l'idéal érotique, pour le reconstruire et recomposer autrement. Au-delà,
+        s'atteler à Ingres c'est bien sûr s'atteler au dessin virtuose, à la
+        ligne serpentine. Les odalisques se retrouvent ici esseulées au milieu
+        d'une forêt de tomates démesurées, parmi des couleurs éclatantes, des
+        atmosphères vaporeuses et des coulures de peintures, des ajouts
+        plastiques bruts. Eden, oui, mais légèrement vacillant et incertain.
+        Dessin, oui, mais sous tension ou perturbé.
+      </p>
+      <p>
+        Dans un cycle de dessins, organisés systématiquement en triptyques,
+        Irène Desvignes part d'abord d'une représentation de plants de tomates ;
+        en reprend ensuite les seules zones sombres et y inscrit une figure
+        féminine ; cartographie enfin le tout de manière abstraite en y ajoutant
+        la première image mentale venue. Pour chaque série, un saut, un écart,
+        est effectué : de la représentation réaliste à celle, ombrée, de
+        l'inconscient, puis à l'abstraction agrémentée d'un motif intuitif et
+        presque surréaliste. Ces trois « plans », pensons-nous, se retrouvent
+        entremêlés sur les toiles de l'artiste, où le regard glisse
+        insensiblement du naturalisme à l'incongru, de la forme à l'informe, de
+        la ligne à la matière, de l'histoire de l'art ou de l'histoire intime à
+        l'inopiné.
+      </p>
+      <p className="signature">Jean-Emmanuel Denave</p>
+      <hr />
+      <h2>Exposition Marseille</h2>
+      <p>
+        Irène Desvignes peint depuis longtemps. Sa recherche s’affine, évolue,
+        au fil de ses transformations et questionnements personnels.
+        <br />
+        Les toiles présentées ici marquent un fort goût pour l’introspection, le
+        retour vers des valeurs fondamentales comme la nature et la féminité,
+        que ce soit dans sa série autobiographique, dans les auto-portraits à la
+        bouée, plus anciens ou ces grands tableaux de femmes aux fleurs, les
+        derniers.
+      </p>
+      <p>
+        Un rapprochement qui s’impose comme une évidence, la nature étant par
+        essence du côté du féminin. D’ailleurs Irène Desvignes n’analyse pas, ne
+        conceptualise pas, elle peint. L’acrylique, un matériau qui sèche vite,
+        devient transparent sous le pinceau de l’artiste, on dirait des
+        aquarelles tant la peinture est diaphane. Évanescente et pourtant
+        charnelle, elle respire la sensualité. L’exemple des tomates joufflues
+        et appétissantes qui deviennent motifs puis taches de couleur, en
+        gardant leur rondeur et leur sensualité, est très clair d’autant que ces
+        détourages sont le point de départ d’une réflexion sur les figures
+        féminines dans la peinture classNameique (le plus souvent peintes par
+        des hommes, charriant ainsi leur lot de fantasmes masculins). Que
+        l’artiste approfondit dans la reprise de La Source d’Ingres qu’elle
+        transforme malicieusement. Ainsi toiles et dessins participent d’une
+        même démarche, même si le dessin est plus automatique et spontané. On
+        retrouve ici une cartographie personnelle, un vagabondage poétique qui
+        s’apparente à des procédés surréalistes, juxtaposant sur le papier des
+        palimpsestes de dessins, apparitions transparentes, traces d’une figure
+        à venir qui reste à l’état d’esquisse.
+      </p>
+      <p>
+        À la fois savant par ses références à l’histoire de la peinture et
+        spontané par la manière de traiter les sujets, l’art (et l’artiste) se
+        laisse approcher à petits pas. Il faut se laisser happer par la toile,
+        se laisser engloutir pour que résonne la palpitation de la germination.
+        Tout comme Irène Desvignes se laisse happer par la contemplation d’un
+        paysage (Le Grand Large) qu’elle transforme en vision singulière avec
+        aplats de rouge et de vert. Tout comme elle ne s’embarrasse pas de
+        réalité quand elle peint des poissons verticaux qui semblent vouloir
+        sauter hors de la toile. Une liberté vivifiante et légère, telle une
+        graminée effleurée par le vent.
+      </p>
+      <p className="signature">Gallia Valette-Pilenko, le 19 octobre 2010</p>
+    </section>
+  );
+};
+
+export default Press;
