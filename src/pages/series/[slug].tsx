@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { promises as fs } from "fs";
 import path from "path";
+import { SRLWrapper } from "simple-react-lightbox";
 import artworks from "../../artworks.json";
 
 interface Props {
@@ -10,17 +11,32 @@ interface Props {
 const Works: NextPage<Props> = ({ serie }) => {
   return (
     <section>
-      <div className="works-list">
+      <div className="works-list"></div>
+      <SRLWrapper
+        options={{
+          settings: { autoplaySpeed: 0, overlayColor: "#587171" },
+          buttons: {
+            showAutoplayButton: false,
+            sowDownloadButton: false,
+            showFullscreenButton: false,
+            showNextButton: false,
+            showPrevButton: false,
+            showThumbnailsButton: false,
+          },
+          caption: { showCaption: false },
+          thumbnails: { showThumbnails: false },
+        }}
+      >
         {serie.images.map((row, index) => (
           <div key={index}>
             {row.map((image) => (
-              <a href="#">
-                <img src={`/images/works/${serie.slug}/${image}.jpg`} />
+              <a href={`/images/works/${serie.slug}/${image}.jpg`} key={image}>
+                <img src={`/images/works/${serie.slug}/thumbs/${image}.jpg`} />
               </a>
             ))}
           </div>
         ))}
-      </div>
+      </SRLWrapper>
     </section>
   );
 };
