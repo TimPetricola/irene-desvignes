@@ -38,7 +38,7 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
       year: 2005,
       location: "Galerie ART DEALER. St Etienne",
     },
-    { month: "Sept", year: 2004, location: "SHOW ROOM", location: "Lyon" },
+    { month: "Sept", year: 2004, location: "SHOW ROOM. Lyon" },
     {
       month: "Nov",
       year: 2001,
