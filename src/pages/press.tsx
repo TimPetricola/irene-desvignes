@@ -1,6 +1,68 @@
 const Press = () => {
   return (
     <section>
+      <h2>TECTONIQUE DU TENDRE</h2>
+      <figure style={{ textAlign: "center", marginBottom: 30 }}>
+        <blockquote style={{ marginBottom: 8, fontStyle: "italic" }}>
+          « (…) À l’intérieur d’un poing fermé, on peut réunir la beauté de
+          mille falaises ».
+        </blockquote>
+        <figcaption>
+          Traité sur les jardins rédigé au XIIe siècle par Du Wan, le «
+          Catalogue des Pierres de la Forêt des Nuages »,
+        </figcaption>
+      </figure>
+      <p>
+        La peinture ne cache pas toujours un contenu dissimulé sous une forme
+        couvrant avec virtuosité petit ou grand secret tout à la fois dérobé et
+        offert au regard. Il arrive que la forme elle-même soit le secret. C’est
+        bien ce que nous suggère le travail d’Irène Desvignes. Que fait-on
+        vraiment lorsqu’on ouvre la peau de la couleur, lorsqu’on la tend ou
+        l’incise, lorsqu’on la caresse ou quand on la force ?
+      </p>
+      <p>
+        Des ondes roses qui dessinent des archipels dans un champ d’énergie, des
+        aplats enserrant des fragments d’îles pris dans des cercles de chaleur
+        ou des effleurements minéraux de jardins secs dans des sables liquides.
+        Des silhouettes sont posées là puis ensevelies sous des matières,
+        figuratives ou abstraites. Des formes à l’informe, un inventaire se
+        devine et fuit dans les coulées claires, dépose là un gouffre incarnat,
+        ici la stridence d’un vert vif. Des longues dérives et de brèves escales
+        à peine crayonnées sur les carnets d’un voyage intime au milieu de
+        quelques objets.
+        <br />
+        La peinture recouvre les traces anciennes, esquisse les figures à venir
+        dans des fluides, laisse apparaitre les sédiments des souvenirs d’un
+        geste. Elle soustrait jusqu’au dépouillement, renverse et réordonne des
+        figures ou des lieux devenus inactuels. Ce palimpseste qui écrit les
+        textes d’un jour nouveau semble garder malgré lui les traces qui l’ont
+        précédé. Comme un mouvement qui n’aurait ni fin, ni fond.
+      </p>
+      <p>
+        C’est bien le corps qui s’impose dans ces entrelacs accueillant des
+        formes qui s’échappent et s’engloutissent dans les germinations d’une
+        matière molle. Irène Desvignes peint les vertiges, les franges et les
+        plongées d’une peau à toucher comme une source. Tout va de douceurs en
+        frémissements dans cette topologie des sens. Lignes calmes ou
+        véhémentes. Ce travail se soutient du corps même de la créatrice, qu’il
+        soit entier ou mutilé, imaginaire ou désirant. La membrane d’une
+        frontière qui isole et qui lie. Il ne s’agit pas à proprement parler
+        d’une figuration mais du choix difficile de peindre les énergies qui
+        courent et qui participent à la création d’un nouveau monde.
+      </p>
+      <p>
+        Ces forces de peau sont aussi celles des origines des temps lorsque nous
+        rêvons de la terre naissante et de ses paysages de pierre et d’arbres
+        dressés. La peinture est un entre monde lorsque la rêverie n’est pas
+        distincte des choses. Elle dit alors la mémoire des vieux volcans des
+        nuits de Chaos avant Gaïa, des iles englouties, des sentiers ravinés
+        après l’orage ou celle de la laisse de mer avec ses algues, mousses et
+        coquillages, déposés par la houle et les courants de marée.
+        <br />
+        Les bois flottés de la vie.
+      </p>
+      <p className="signature">Christian Sozzi, Galerie B+, Juin 2021</p>
+      <hr />
       <h2>Irène Desvignes : D’îles en elle</h2>
       <p>
         Du rose, du bleu, un lac vert, des îles, une cartographie imagée en
@@ -112,51 +174,6 @@ const Press = () => {
         l'inopiné.
       </p>
       <p className="signature">Jean-Emmanuel Denave</p>
-      <hr />
-      <h2>Exposition Marseille</h2>
-      <p>
-        Irène Desvignes peint depuis longtemps. Sa recherche s’affine, évolue,
-        au fil de ses transformations et questionnements personnels.
-        <br />
-        Les toiles présentées ici marquent un fort goût pour l’introspection, le
-        retour vers des valeurs fondamentales comme la nature et la féminité,
-        que ce soit dans sa série autobiographique, dans les auto-portraits à la
-        bouée, plus anciens ou ces grands tableaux de femmes aux fleurs, les
-        derniers.
-      </p>
-      <p>
-        Un rapprochement qui s’impose comme une évidence, la nature étant par
-        essence du côté du féminin. D’ailleurs Irène Desvignes n’analyse pas, ne
-        conceptualise pas, elle peint. L’acrylique, un matériau qui sèche vite,
-        devient transparent sous le pinceau de l’artiste, on dirait des
-        aquarelles tant la peinture est diaphane. Évanescente et pourtant
-        charnelle, elle respire la sensualité. L’exemple des tomates joufflues
-        et appétissantes qui deviennent motifs puis taches de couleur, en
-        gardant leur rondeur et leur sensualité, est très clair d’autant que ces
-        détourages sont le point de départ d’une réflexion sur les figures
-        féminines dans la peinture classNameique (le plus souvent peintes par
-        des hommes, charriant ainsi leur lot de fantasmes masculins). Que
-        l’artiste approfondit dans la reprise de La Source d’Ingres qu’elle
-        transforme malicieusement. Ainsi toiles et dessins participent d’une
-        même démarche, même si le dessin est plus automatique et spontané. On
-        retrouve ici une cartographie personnelle, un vagabondage poétique qui
-        s’apparente à des procédés surréalistes, juxtaposant sur le papier des
-        palimpsestes de dessins, apparitions transparentes, traces d’une figure
-        à venir qui reste à l’état d’esquisse.
-      </p>
-      <p>
-        À la fois savant par ses références à l’histoire de la peinture et
-        spontané par la manière de traiter les sujets, l’art (et l’artiste) se
-        laisse approcher à petits pas. Il faut se laisser happer par la toile,
-        se laisser engloutir pour que résonne la palpitation de la germination.
-        Tout comme Irène Desvignes se laisse happer par la contemplation d’un
-        paysage (Le Grand Large) qu’elle transforme en vision singulière avec
-        aplats de rouge et de vert. Tout comme elle ne s’embarrasse pas de
-        réalité quand elle peint des poissons verticaux qui semblent vouloir
-        sauter hors de la toile. Une liberté vivifiante et légère, telle une
-        graminée effleurée par le vent.
-      </p>
-      <p className="signature">Gallia Valette-Pilenko, le 19 octobre 2010</p>
     </section>
   );
 };
