@@ -1,6 +1,6 @@
 type Exhibition = {
   month: string;
-  year: mumber;
+  year: number;
   location: string;
 };
 
