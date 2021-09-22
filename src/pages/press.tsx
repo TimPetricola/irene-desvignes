@@ -103,12 +103,13 @@ const Press = () => {
       <hr />
       <div className="center">
         <iframe
-          allowFullScreen
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/OMHm_88Hyf8"
           frameBorder={0}
-          width={480}
-          height={390}
-          src="http://www.youtube.com/embed/OMHm_88Hyf8"
-        />
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
       <hr />
       <p>
