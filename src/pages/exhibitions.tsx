@@ -6,6 +6,7 @@ type Exhibition = {
 
 const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
   INDIVIDUAL: [
+    { month: "Juin", year: 2023, location: "HANGAR 717. Villefranche-Gleizé" },
     { month: "Sept", year: 2021, location: "Galerie B+. Lyon" },
     {
       month: "Juil",
@@ -61,6 +62,12 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
     },
   ],
   GROUP: [
+    {
+      month: "Oct",
+      year: 2023,
+      location: "LYON ART PAPER - Salon de dessin contemporain",
+    },
+    { month: "Juin", year: 2023, location: "18 Le Bourg. Aigueperse" },
     { month: "Avril", year: 2008, location: "IDS. Paris" },
     {
       month: "Avril",
