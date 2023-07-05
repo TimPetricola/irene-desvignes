@@ -5,7 +5,12 @@ import { SRLWrapper } from "simple-react-lightbox";
 import artworks from "../../artworks.json";
 
 interface Props {
-  serie: { slug: string; name: string; images: (number | string)[][] };
+  serie: {
+    slug: string;
+    name: string;
+    optimize?: boolean;
+    images: (number | string)[][];
+  };
 }
 
 const Works: NextPage<Props> = ({ serie }) => {
