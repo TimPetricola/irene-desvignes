@@ -40,40 +40,39 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <nav id="navigation">
               <ul className="main">
                 <li>
-                  <Link href="/">
-                    <a className={router.asPath === "/" ? "active" : ""}>
-                      Intro
-                    </a>
+                  <Link
+                    href="/"
+                    className={router.asPath === "/" ? "active" : ""}
+                  >
+                    Intro
                   </Link>
                 </li>
                 <li>
-                  <Link href="/series">
-                    <a
-                      className={
-                        router.asPath.startsWith("/series") ? "active" : ""
-                      }
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsSeriesNavOpen(!isSeriesNavOpen);
-                      }}
-                    >
-                      Oeuvres
-                    </a>
+                  <Link
+                    href="/series"
+                    className={
+                      router.asPath.startsWith("/series") ? "active" : ""
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsSeriesNavOpen(!isSeriesNavOpen);
+                    }}
+                  >
+                    Oeuvres
                   </Link>
                   {isSeriesNavOpen && (
                     <ul>
                       {artworks.series.map((serie) => (
                         <li key={serie.slug}>
-                          <Link href={`/series/${serie.slug}`}>
-                            <a
-                              className={`work ${
-                                router.asPath === `/series/${serie.slug}`
-                                  ? "active"
-                                  : ""
-                              }`}
-                            >
-                              {serie.name}
-                            </a>
+                          <Link
+                            href={`/series/${serie.slug}`}
+                            className={`work ${
+                              router.asPath === `/series/${serie.slug}`
+                                ? "active"
+                                : ""
+                            }`}
+                          >
+                            {serie.name}
                           </Link>
                         </li>
                       ))}
@@ -81,39 +80,35 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                   )}
                 </li>
                 <li>
-                  <Link href="/press">
-                    <a className={router.asPath === "/press" ? "active" : ""}>
-                      Presse
-                    </a>
+                  <Link
+                    href="/press"
+                    className={router.asPath === "/press" ? "active" : ""}
+                  >
+                    Presse
                   </Link>
                 </li>
                 <li>
-                  <Link href="/exhibitions">
-                    <a
-                      className={
-                        router.asPath === "/exhibitions" ? "active" : ""
-                      }
-                    >
-                      Expos
-                    </a>
+                  <Link
+                    href="/exhibitions"
+                    className={router.asPath === "/exhibitions" ? "active" : ""}
+                  >
+                    Expos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/background">
-                    <a
-                      className={
-                        router.asPath === "/background" ? "active" : ""
-                      }
-                    >
-                      Formation
-                    </a>
+                  <Link
+                    href="/background"
+                    className={router.asPath === "/background" ? "active" : ""}
+                  >
+                    Formation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact">
-                    <a className={router.asPath === "/contact" ? "active" : ""}>
-                      Contact
-                    </a>
+                  <Link
+                    href="/contact"
+                    className={router.asPath === "/contact" ? "active" : ""}
+                  >
+                    Contact
                   </Link>
                 </li>
               </ul>
