@@ -63,7 +63,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                   {isSeriesNavOpen && (
                     <ul>
                       {artworks.series.map((serie) => (
-                        <li>
+                        <li key={serie.slug}>
                           <Link href={`/series/${serie.slug}`}>
                             <a
                               className={`work ${
