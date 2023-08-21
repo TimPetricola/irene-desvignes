@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
-import type { AppProps } from "next/app";
+import App, { type AppProps } from "next/app";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import SimpleReactLightbox from "simple-react-lightbox";
-import artworks from "../artworks.json";
+import client from "../../tina/__generated__/client";
 
 import "../styles/application.sass";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, ...props }: AppProps) => {
   const router = useRouter();
+
+  // @ts-ignore
+  const series = props.series;
 
   const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
     router.asPath.startsWith("/series")
@@ -62,7 +65,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                   </Link>
                   {isSeriesNavOpen && (
                     <ul>
-                      {artworks.series.map((serie) => (
+                      {series.map((serie) => (
                         <li key={serie.slug}>
                           <Link
                             href={`/series/${serie.slug}`}
@@ -72,7 +75,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                                 : ""
                             }`}
                           >
-                            {serie.name}
+                            {serie.title}
                           </Link>
                         </li>
                       ))}
@@ -124,3 +127,19 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 };
 
 export default MyApp;
+
+MyApp.getInitialProps = async (context) => {
+  const ctx = await App.getInitialProps(context);
+
+  const { data } = await client.queries.serieConnection({
+    sort: "priority",
+    last: -1,
+  });
+
+  const series = data.serieConnection.edges.map((edge) => ({
+    slug: edge.node._sys.filename,
+    title: edge.node.title,
+  }));
+
+  return { ...ctx, series };
+};

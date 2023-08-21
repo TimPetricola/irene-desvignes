@@ -1,0 +1,136 @@
+{
+  "individual": [
+    {
+      "name": "HANGAR 717. Villefranche-Gleizé",
+      "month": "Juin",
+      "year": 2023
+    },
+    {
+      "name": "Galerie B+. Lyon",
+      "month": "Sept",
+      "year": 2021
+    },
+    {
+      "name": "ETAC- Eglise St Valérien/ Tournus",
+      "month": "Juil",
+      "year": 2019
+    },
+    {
+      "name": "POLARIS. Corbas",
+      "month": "Avril",
+      "year": 2015
+    },
+    {
+      "name": "Galerie IL TRITTICO. Rome",
+      "month": "Avril",
+      "year": 2011
+    },
+    {
+      "name": "Galerie SONGE D’ICARE. Marseille",
+      "month": "Déc",
+      "year": 2010
+    },
+    {
+      "name": "Casino- Hauteville-Lompnes/Centre d’art contemporain. LACOUX",
+      "month": "Mai",
+      "year": 2007
+    },
+    {
+      "name": "Nouveau PALAIS DE JUSTICE. Lyon",
+      "month": "Sept",
+      "year": 2006
+    },
+    {
+      "name": "Galerie ART DEALER. St Etienne",
+      "month": "Juin",
+      "year": 2005
+    },
+    {
+      "name": "SHOW ROOM. Lyon",
+      "month": "Sept",
+      "year": 2004
+    },
+    {
+      "name": "Cité  SEMBAT-SEGUIN. Vénissieux",
+      "month": "Nov",
+      "year": 2001
+    },
+    {
+      "name": "ESPACE ARTS PLASTIQUES. Vénissieux",
+      "month": "Avril",
+      "year": 1998
+    },
+    {
+      "name": "Œuvres récentes dans l’atelier. Lyon",
+      "month": "Mars",
+      "year": 1993
+    },
+    {
+      "name": "Galerie PLAN DE TRAVAIL. Lyon",
+      "month": "Juin",
+      "year": 1992
+    }
+  ],
+  "group": [
+    {
+      "name": "LYON ART PAPER - Salon de dessin contemporain",
+      "month": "Oct",
+      "year": 2023
+    },
+    {
+      "name": "18 Le Bourg. Aigueperse",
+      "month": "Juin",
+      "year": 2023
+    },
+    {
+      "name": "IDS. Paris",
+      "month": "Avril",
+      "year": 2008
+    },
+    {
+      "name": "Hôpital Bretonneau. Paris",
+      "month": "Avril",
+      "year": 2008
+    },
+    {
+      "name": "Salon de MONTROUGE",
+      "month": "Avril",
+      "year": 2007
+    },
+    {
+      "name": "WARTSAAL 3. « Passage ». Bern",
+      "month": "Juill",
+      "year": 2006
+    },
+    {
+      "name": "Salon de MONTROUGE",
+      "month": "Avril",
+      "year": 2006
+    },
+    {
+      "name": "MAC-Pérouges. « le souffle »",
+      "month": "Juill",
+      "year": 2005
+    },
+    {
+      "name": "MAPRA. Lyon",
+      "month": "Juill",
+      "year": 2005
+    },
+    {
+      "name": "Galerie SWAP. Lyon",
+      "month": "Janv",
+      "year": 2005
+    },
+    {
+      "name": "MAC-Pérouges. « la figure de l’ange »",
+      "month": "Sept",
+      "year": 2003
+    },
+    {
+      "name": "L’EMBARCADERE. Lyon ",
+      "month": "Janv",
+      "year": 1994
+    }
+  ]
+}

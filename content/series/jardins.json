@@ -1,0 +1,32 @@
+{
+  "title": "Jardins",
+  "priority": 5,
+  "images1": [
+    "/images/works/jardins/21.jpg",
+    "/images/works/jardins/10.jpg",
+    "/images/works/jardins/11.jpg",
+    "/images/works/jardins/7.jpg"
+  ],
+  "images2": [
+    "/images/works/jardins/20.jpg",
+    "/images/works/jardins/9.jpg",
+    "/images/works/jardins/6.jpg"
+  ],
+  "images3": [
+    "/images/works/jardins/15.jpg",
+    "/images/works/jardins/16.jpg",
+    "/images/works/jardins/17.jpg",
+    "/images/works/jardins/18.jpg"
+  ],
+  "images4": [
+    "/images/works/jardins/12.jpg",
+    "/images/works/jardins/13.jpg",
+    "/images/works/jardins/14.jpg",
+    "/images/works/jardins/5.jpg"
+  ],
+  "images5": [
+    "/images/works/jardins/1.jpg",
+    "/images/works/jardins/3.jpg",
+    "/images/works/jardins/2.jpg"
+  ]
+}

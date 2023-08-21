@@ -1,0 +1,31 @@
+{
+  "title": "Rouge À Coeur",
+  "priority": 10,
+  "images1": [
+    "/images/works/rouge-a-coeur/1.jpg",
+    "/images/works/rouge-a-coeur/2.jpg",
+    "/images/works/rouge-a-coeur/3.jpg"
+  ],
+  "images2": [
+    "/images/works/rouge-a-coeur/4.jpg",
+    "/images/works/rouge-a-coeur/5.jpg",
+    "/images/works/rouge-a-coeur/6.jpg"
+  ],
+  "images3": [
+    "/images/works/rouge-a-coeur/7.jpg",
+    "/images/works/rouge-a-coeur/8.jpg",
+    "/images/works/rouge-a-coeur/9.jpg",
+    "/images/works/rouge-a-coeur/10.jpg"
+  ],
+  "images4": [
+    "/images/works/rouge-a-coeur/11.jpg",
+    "/images/works/rouge-a-coeur/12.jpg",
+    "/images/works/rouge-a-coeur/13.jpg",
+    "/images/works/rouge-a-coeur/14.jpg",
+    "/images/works/rouge-a-coeur/15.jpg"
+  ],
+  "images5": [
+    "/images/works/rouge-a-coeur/16.jpg",
+    "/images/works/rouge-a-coeur/17.jpg"
+  ]
+}

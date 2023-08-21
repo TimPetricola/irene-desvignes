@@ -1,19 +1,19 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { promises as fs } from "fs";
-import path from "path";
+import { useTina } from "tinacms/dist/react";
 import { SRLWrapper } from "simple-react-lightbox";
-import artworks from "../../artworks.json";
+import client from "../../../tina/__generated__/client";
 
-interface Props {
-  serie: {
-    slug: string;
-    name: string;
-    optimize?: boolean;
-    images: (number | string)[][];
-  };
-}
+const Works = (props) => {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
 
-const Works: NextPage<Props> = ({ serie }) => {
+  const rows = Array.from(
+    { length: 15 },
+    (_, index) => data.serie[`images${index + 1}`]
+  ).filter((row) => Array.isArray(row) && row.length > 0);
+
   return (
     <section>
       <div className="works-list"></div>
@@ -32,18 +32,11 @@ const Works: NextPage<Props> = ({ serie }) => {
           thumbnails: { showThumbnails: false },
         }}
       >
-        {serie.images.map((row, index) => (
+        {rows.map((row, index) => (
           <div key={index}>
             {row.map((image) => (
-              <a
-                href={`/images/works/${serie.slug}/${image}.jpg`}
-                key={image}
-                className="works-list-thumb"
-              >
-                <img
-                  src={`/images/works/${serie.slug}/thumbs/${image}.jpg`}
-                  className="works-list-img"
-                />
+              <a href={image} key={image} className="works-list-thumb">
+                <img src={image} className="works-list-img" />
               </a>
             ))}
           </div>
@@ -53,24 +46,29 @@ const Works: NextPage<Props> = ({ serie }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const filePath = path.join(process.cwd(), "src/artworks.json");
-  const artworks = JSON.parse(await fs.readFile(filePath, "utf8"));
+export const getStaticPaths = async () => {
+  const { data } = await client.queries.serieConnection();
+  const paths = data.serieConnection.edges.map((page) => ({
+    params: { slug: page.node._sys.filename },
+  }));
 
   return {
-    paths: artworks.series.map((serie: { slug: string }) => ({
-      params: { slug: serie.slug },
-    })),
-    fallback: false,
+    paths,
+    fallback: "blocking",
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const slug = params?.slug as string;
-  const serie = artworks.series.find(
-    (serie: { slug: string }) => serie.slug === slug
-  );
-  return { props: { serie } };
+export const getStaticProps = async ({ params }) => {
+  const { data, query, variables } = await client.queries.serie({
+    relativePath: `${params.slug}.json`,
+  });
+  return {
+    props: {
+      variables: variables,
+      data: data,
+      query: query,
+    },
+  };
 };
 
 export default Works;
