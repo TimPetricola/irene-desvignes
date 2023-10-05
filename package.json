@@ -1,20 +1,18 @@
 {
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build && next build",
-    "start": "tinacms build && next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "resize": "ts-node tools/resize.ts"
   },
   "dependencies": {
-    "@tinacms/cli": "^1.5.28",
     "eslint-config-next": "^13.4.8",
     "next": "^13.4.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.38.2",
     "simple-react-lightbox": "^3.6.9-0",
-    "tinacms": "^1.5.19",
     "typescript": "^5.1.6"
   },
   "devDependencies": {

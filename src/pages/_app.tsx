@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import App, { type AppProps } from "next/app";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import SimpleReactLightbox from "simple-react-lightbox";
-import client from "../../tina/__generated__/client";
+import artworks from "../artworks.json";
 
 import "../styles/application.sass";
 
-const MyApp = ({ Component, pageProps, ...props }: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-
-  // @ts-ignore
-  const series = props.series;
 
   const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
     router.asPath.startsWith("/series")
@@ -65,7 +62,7 @@ const MyApp = ({ Component, pageProps, ...props }: AppProps) => {
                   </Link>
                   {isSeriesNavOpen && (
                     <ul>
-                      {series.map((serie) => (
+                      {artworks.series.map((serie) => (
                         <li key={serie.slug}>
                           <Link
                             href={`/series/${serie.slug}`}
@@ -75,7 +72,7 @@ const MyApp = ({ Component, pageProps, ...props }: AppProps) => {
                                 : ""
                             }`}
                           >
-                            {serie.title}
+                            {serie.name}
                           </Link>
                         </li>
                       ))}
@@ -127,19 +124,3 @@ const MyApp = ({ Component, pageProps, ...props }: AppProps) => {
 };
 
 export default MyApp;
-
-MyApp.getInitialProps = async (context) => {
-  const ctx = await App.getInitialProps(context);
-
-  const { data } = await client.queries.serieConnection({
-    sort: "priority",
-    last: -1,
-  });
-
-  const series = data.serieConnection.edges.map((edge) => ({
-    slug: edge.node._sys.filename,
-    title: edge.node.title,
-  }));
-
-  return { ...ctx, series };
-};
