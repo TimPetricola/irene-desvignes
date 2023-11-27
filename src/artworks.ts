@@ -80,24 +80,24 @@ export default {
         ],
         ["ilots-zen-1", "ilots-zen-2", "ilots-zen-3", "ilots-zen-4"],
         ["ilots-zen-5", "ilots-zen-6"],
-        [
-          "cartographie-sejours-1",
-          "cartographie-sejours-2",
-          "cartographie-sejours-3",
-          "cartographie-sejours-4",
-        ],
-        [
-          "cartographie-sejours-5",
-          "cartographie-sejours-6",
-          "cartographie-sejours-7",
-          "cartographie-sejours-8",
-        ],
-        [
-          "cartographie-sejours-9",
-          "cartographie-sejours-10",
-          "cartographie-sejours-11",
-          "cartographie-sejours-12",
-        ],
+        // [
+        //   "cartographie-sejours-1",
+        //   "cartographie-sejours-2",
+        //   "cartographie-sejours-3",
+        //   "cartographie-sejours-4",
+        // ],
+        // [
+        //   "cartographie-sejours-5",
+        //   "cartographie-sejours-6",
+        //   "cartographie-sejours-7",
+        //   "cartographie-sejours-8",
+        // ],
+        // [
+        //   "cartographie-sejours-9",
+        //   "cartographie-sejours-10",
+        //   "cartographie-sejours-11",
+        //   "cartographie-sejours-12",
+        // ],
         [
           "petits-volcans-apprivoises-1",
           "petits-volcans-apprivoises-2",
