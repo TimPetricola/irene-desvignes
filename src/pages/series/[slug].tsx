@@ -1,8 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { promises as fs } from "fs";
-import path from "path";
 import { SRLWrapper } from "simple-react-lightbox";
-import artworks from "../../artworks.json";
+import artworks from "../../artworks";
 
 interface Props {
   serie: {
@@ -54,9 +52,6 @@ const Works: NextPage<Props> = ({ serie }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const filePath = path.join(process.cwd(), "src/artworks.json");
-  const artworks = JSON.parse(await fs.readFile(filePath, "utf8"));
-
   return {
     paths: artworks.series.map((serie: { slug: string }) => ({
       params: { slug: serie.slug },

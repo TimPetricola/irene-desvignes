@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import SimpleReactLightbox from "simple-react-lightbox";
-import artworks from "../artworks.json";
+import artworks from "../artworks";
 
 import "../styles/application.sass";
 
