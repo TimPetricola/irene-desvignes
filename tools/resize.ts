@@ -36,7 +36,7 @@ fs.readdir(directoryPath, async (err, directories) => {
         .resize(850, 650, { fit: "inside" })
         .toFile(imageDestPath);
       await sharp(imageSourcePath)
-        .resize(122, 122, { fit: "inside" })
+        .resize(122, 122, { fit: "cover" })
         .toFile(thumbPath);
     }
   }
