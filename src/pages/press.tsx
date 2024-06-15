@@ -1,6 +1,72 @@
 const Press = () => {
   return (
     <section>
+      <h2>IRENE DESVIGNES - L'EVEIL DU VOLCAN</h2>
+
+      <p style={{ fontStyle: "italic" }}>
+        Si elle creuse une intime relation au réel, voire à un environnement
+        réaliste qu'on devine vécu, très vite une sourde déformation envahit la
+        toile, insidieuse et dérangeante, comme si les troubles tensions du
+        dedans secret venaient perturber l'ordre établi.
+      </p>
+
+      <p>
+        Modifiées, transformées, voire agres-sées, les formes initiales, à
+        savoir celles des objets d'un quotidien a priori rassurant, installent
+        une atmosphère chargée, onirique, sinon fantastique. L'art d'Irène
+        Designes « enchante et oppresse», comme elle le dit du peintre Peter
+        Doig qui, naguère, l'a envoûtée. Elle n'a guère de limite : « Le style,
+        c'est l'absence d'enfermement.» Elle impose ainsi un constant et
+        réjouissant malaise, un décalage prenant et surprenant, et une
+        implacable présence d'art, sidérante d'intensité picturale, et d'autant
+        plus forte que sa chromatique éclabousse l'étendue. Comme si une absence
+        dévorante, subtilement mons-trueuse, envahissait la scénographie
+        installée, en partie tranquille, en partie inquiétante.
+      </p>
+
+      <p>
+        À l'aise dans le champ ouvert d'une création plurielle et vive, Irène
+        Desvignes intègre ici et là des éléments abstraits, dans un vêtement
+        abandonné, dans une plaque murale ou dans la trame exacerbée d'une
+        chevelure. Si le corps est le cœur de la création âpre et tonique
+        d'Irène Designes, la couleur, libérée de ses relations au réel et
+        débordant les contours linéaires des formes reconnues, semble vivre sa
+        vie propre, « démarche qui m'embarque dans un infini ». Aller toujours
+        plus loin est son credo.
+      </p>
+
+      <h3>ÉNIGMES ET VIBRATIONS</h3>
+
+      <p>
+        Irène Desvignes s'élance souvent d'une photographie prise par elle-même,
+        ou d'une capture d'écran, quand une scène l'a fascinée, choc émotionnel
+        à la clef. Tranche de réel prélevé, et « temps d'arrêt, temps suspendu
+        », comme dans les marges énigmatiques d'un Hopper exacerbé. Suit une
+        esquisse qui prépare la peinture. Vibrante et tendue, chaque œuvre
+        intègre différents niveaux de lecture qui « se retrouvent entremêlés sur
+        les toiles de l'artiste, où le regard glisse insensiblement du
+        naturalisme à l'incongru, de la forme à l'informe, de la ligne à la
+        matière, de l'histoire de l'art ou de l'histoire intime à l'inopiné»,
+        comme l'écrit très justement Jean-Emmanuel Denave.
+      </p>
+
+      <p>
+        Quant aux êtres montrés, le plus souvent féminins - la récente série de
+        dessins consacrée aux soldates est impressionnante -, il ne s'agit
+        jamais d'individualités : « Je ne représente pas les personnes, mais
+        l'humain est contenu dans mes peintures.» On voit donc des silhouettes
+        traversées par des flux d'éner-gie, et leur puissance colorée traverse
+        le decor. « J'ai longtemps été un volcan éteint. Et maintenant le rouge
+        vient du magma, et l'enfoui s'éveille en éruption mentale. » Création
+        sous haute tension.
+      </p>
+
+      <p className="signature">
+        Christian Noorbergen, ARTENSION, mars - avril 2024
+      </p>
+
+      <hr />
+
       <h2>TECTONIQUE DU TENDRE</h2>
       <figure style={{ textAlign: "center", marginBottom: 30 }}>
         <blockquote style={{ marginBottom: 8, fontStyle: "italic" }}>
