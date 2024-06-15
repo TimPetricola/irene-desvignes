@@ -11,17 +11,17 @@ const Press = () => {
       </p>
 
       <p>
-        Modifiées, transformées, voire agres-sées, les formes initiales, à
-        savoir celles des objets d'un quotidien a priori rassurant, installent
-        une atmosphère chargée, onirique, sinon fantastique. L'art d'Irène
-        Designes « enchante et oppresse», comme elle le dit du peintre Peter
-        Doig qui, naguère, l'a envoûtée. Elle n'a guère de limite : « Le style,
-        c'est l'absence d'enfermement.» Elle impose ainsi un constant et
-        réjouissant malaise, un décalage prenant et surprenant, et une
-        implacable présence d'art, sidérante d'intensité picturale, et d'autant
-        plus forte que sa chromatique éclabousse l'étendue. Comme si une absence
-        dévorante, subtilement mons-trueuse, envahissait la scénographie
-        installée, en partie tranquille, en partie inquiétante.
+        Modifiées, transformées, voire agressées, les formes initiales, à savoir
+        celles des objets d'un quotidien a priori rassurant, installent une
+        atmosphère chargée, onirique, sinon fantastique. L'art d'Irène Designes
+        « enchante et oppresse», comme elle le dit du peintre Peter Doig qui,
+        naguère, l'a envoûtée. Elle n'a guère de limite : « Le style, c'est
+        l'absence d'enfermement.» Elle impose ainsi un constant et réjouissant
+        malaise, un décalage prenant et surprenant, et une implacable présence
+        d'art, sidérante d'intensité picturale, et d'autant plus forte que sa
+        chromatique éclabousse l'étendue. Comme si une absence dévorante,
+        subtilement mons-trueuse, envahissait la scénographie installée, en
+        partie tranquille, en partie inquiétante.
       </p>
 
       <p>
@@ -29,7 +29,7 @@ const Press = () => {
         Desvignes intègre ici et là des éléments abstraits, dans un vêtement
         abandonné, dans une plaque murale ou dans la trame exacerbée d'une
         chevelure. Si le corps est le cœur de la création âpre et tonique
-        d'Irène Designes, la couleur, libérée de ses relations au réel et
+        d'Irène Desvignes, la couleur, libérée de ses relations au réel et
         débordant les contours linéaires des formes reconnues, semble vivre sa
         vie propre, « démarche qui m'embarque dans un infini ». Aller toujours
         plus loin est son credo.
@@ -55,8 +55,8 @@ const Press = () => {
         dessins consacrée aux soldates est impressionnante -, il ne s'agit
         jamais d'individualités : « Je ne représente pas les personnes, mais
         l'humain est contenu dans mes peintures.» On voit donc des silhouettes
-        traversées par des flux d'éner-gie, et leur puissance colorée traverse
-        le decor. « J'ai longtemps été un volcan éteint. Et maintenant le rouge
+        traversées par des flux d'énergie, et leur puissance colorée traverse le
+        décor. « J'ai longtemps été un volcan éteint. Et maintenant le rouge
         vient du magma, et l'enfoui s'éveille en éruption mentale. » Création
         sous haute tension.
       </p>

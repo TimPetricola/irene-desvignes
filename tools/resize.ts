@@ -32,12 +32,14 @@ fs.readdir(directoryPath, async (err, directories) => {
 
       fs.mkdirSync(path.dirname(thumbPath), { recursive: true });
 
-      await sharp(imageSourcePath)
-        .resize(850, 650, { fit: "inside" })
-        .toFile(imageDestPath);
-      await sharp(imageSourcePath)
-        .resize(122, 122, { fit: "cover" })
-        .toFile(thumbPath);
+      await Promise.all([
+        sharp(imageSourcePath)
+          .resize(850, 650, { fit: "inside" })
+          .toFile(imageDestPath),
+        sharp(imageSourcePath)
+          .resize(122, 122, { fit: "cover" })
+          .toFile(thumbPath),
+      ]);
     }
   }
 });
