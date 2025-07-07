@@ -6,6 +6,11 @@ type Exhibition = {
 
 const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
   INDIVIDUAL: [
+    {
+      month: "Mars",
+      year: 2025,
+      location: "CONDITION DES SOIES / Bibliothèque 1er. Lyon",
+    },
     { month: "Juin", year: 2023, location: "HANGAR 717. Villefranche-Gleizé" },
     { month: "Sept", year: 2021, location: "Galerie B+. Lyon" },
     {
@@ -62,6 +67,11 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
     },
   ],
   GROUP: [
+    {
+      month: "Oct",
+      year: 2025,
+      location: "MUSEE Paul DINI. Villefranche sur Saône",
+    },
     {
       month: "Oct",
       year: 2023,
