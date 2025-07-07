@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import artworks from "../artworks";
 
+const preloadPage = (url: string) => {
+  const link = document.createElement("link");
+  link.rel = "prefetch";
+  link.href = url;
+  document.head.appendChild(link);
+};
+
 interface NavigationProps {
   currentPath: string;
 }
@@ -29,6 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             <a
               href="/"
               className={currentPath === "/" ? "active" : ""}
+              onMouseEnter={() => preloadPage("/")}
             >
               Intro
             </a>
@@ -55,6 +63,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
                           ? "active"
                           : ""
                       }`}
+                      onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
                     >
                       {serie.name}
                     </a>
@@ -67,6 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             <a
               href="/press"
               className={currentPath === "/press" ? "active" : ""}
+              onMouseEnter={() => preloadPage("/press")}
             >
               Presse
             </a>
@@ -75,6 +85,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             <a
               href="/exhibitions"
               className={currentPath === "/exhibitions" ? "active" : ""}
+              onMouseEnter={() => preloadPage("/exhibitions")}
             >
               Expos
             </a>
@@ -83,6 +94,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             <a
               href="/background"
               className={currentPath === "/background" ? "active" : ""}
+              onMouseEnter={() => preloadPage("/background")}
             >
               Formation
             </a>
@@ -91,6 +103,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             <a
               href="/contact"
               className={currentPath === "/contact" ? "active" : ""}
+              onMouseEnter={() => preloadPage("/contact")}
             >
               Contact
             </a>
