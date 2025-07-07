@@ -6,6 +6,5 @@
     "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"],
-  "exclude": ["node_modules"],
-  "ts-node": { "compilerOptions": { "module": "CommonJS" } }
+  "exclude": ["node_modules"]
 }
