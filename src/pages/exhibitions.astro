@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Table, { EXHIBITIONS } from '../components/ExhibitionsTable';
+---
+
+<BaseLayout>
+  <section>
+    <h3>Expos personnelles</h3>
+    <Table exhibitions={EXHIBITIONS.INDIVIDUAL} client:load />
+
+    <h3>Expos collectives</h3>
+    <Table exhibitions={EXHIBITIONS.GROUP} client:load />
+  </section>
+</BaseLayout>

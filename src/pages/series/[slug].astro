@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorksGallery from '../../components/WorksGallery';
+import artworks from '../../artworks';
+
+export function getStaticPaths() {
+  return artworks.series.map((serie) => ({
+    params: { slug: serie.slug },
+    props: { serie },
+  }));
+}
+
+const { serie } = Astro.props;
+---
+
+<BaseLayout>
+  <section>
+    <div class="works-list"></div>
+    <WorksGallery serie={serie} client:load />
+  </section>
+</BaseLayout>

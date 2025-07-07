@@ -1,10 +1,12 @@
+import React from 'react';
+
 type Exhibition = {
   month: string;
   year: number;
   location: string;
 };
 
-const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
+export const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
   INDIVIDUAL: [
     {
       month: "Mars",
@@ -27,12 +29,12 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
     {
       month: "Déc",
       year: 2010,
-      location: "Galerie SONGE D’ICARE. Marseille",
+      location: "Galerie SONGE D'ICARE. Marseille",
     },
     {
       month: "Mai",
       year: 2007,
-      location: "Casino- Hauteville-Lompnes/Centre d’art contemporain. LACOUX",
+      location: "Casino- Hauteville-Lompnes/Centre d'art contemporain. LACOUX",
     },
     {
       month: "Sept",
@@ -58,7 +60,7 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
     {
       month: "Mars",
       year: 1993,
-      location: "Œuvres récentes dans l’atelier. Lyon",
+      location: "Œuvres récentes dans l'atelier. Lyon",
     },
     {
       month: "Juin",
@@ -101,9 +103,9 @@ const EXHIBITIONS: { INDIVIDUAL: Exhibition[]; GROUP: Exhibition[] } = {
     {
       month: "Sept",
       year: 2003,
-      location: "MAC-Pérouges. « la figure de l’ange »",
+      location: "MAC-Pérouges. « la figure de l'ange »",
     },
-    { month: "Janv", year: 1994, location: "L’EMBARCADERE. Lyon " },
+    { month: "Janv", year: 1994, location: "L'EMBARCADERE. Lyon " },
   ],
 };
 
@@ -119,16 +121,4 @@ const Table: React.FC<{ exhibitions: Exhibition[] }> = ({ exhibitions }) => (
   </table>
 );
 
-const Exhibitions = () => {
-  return (
-    <section>
-      <h3>Expos personnelles</h3>
-      <Table exhibitions={EXHIBITIONS.INDIVIDUAL} />
-
-      <h3>Expos collectives</h3>
-      <Table exhibitions={EXHIBITIONS.GROUP} />
-    </section>
-  );
-};
-
-export default Exhibitions;
+export default Table;
