@@ -9,17 +9,28 @@ const preloadPage = (url: string) => {
 
 interface NavigationProps {
   currentPath: string;
-  series: Array<{
-    slug: string;
-    name: string;
-  }>;
+  groupedSeries: {
+    peintures: Array<{
+      slug: string;
+      name: string;
+      category: string;
+    }>;
+    dessins: Array<{
+      slug: string;
+      name: string;
+      category: string;
+    }>;
+  };
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
+const Navigation: React.FC<NavigationProps> = ({
+  currentPath,
+  groupedSeries,
+}) => {
   // Helper function to check if a path matches (handles trailing slashes)
   const isPathActive = (expectedPath: string) => {
-    const normalizedCurrent = currentPath.replace(/\/$/, '') || '/';
-    const normalizedExpected = expectedPath.replace(/\/$/, '') || '/';
+    const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+    const normalizedExpected = expectedPath.replace(/\/$/, "") || "/";
     return normalizedCurrent === normalizedExpected;
   };
 
@@ -64,21 +75,52 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
             </a>
             {isSeriesNavOpen && (
               <ul>
-                {series.map((serie) => (
-                  <li key={serie.slug}>
-                    <a
-                      href={`/series/${serie.slug}`}
-                      className={`work ${
-                        isPathActive(`/series/${serie.slug}`)
-                          ? "active"
-                          : ""
-                      }`}
-                      onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
-                    >
-                      {serie.name}
-                    </a>
+                <li>
+                  <span className="category-title">Peintures</span>
+                  <ul>
+                    {groupedSeries.peintures.map((serie) => (
+                      <li key={serie.slug}>
+                        <a
+                          href={`/series/${serie.slug}`}
+                          className={`work ${
+                            isPathActive(`/series/${serie.slug}`)
+                              ? "active"
+                              : ""
+                          }`}
+                          onMouseEnter={() =>
+                            preloadPage(`/series/${serie.slug}`)
+                          }
+                        >
+                          {serie.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+                {groupedSeries.dessins.length > 0 && (
+                  <li>
+                    <span className="category-title">Dessins</span>
+                    <ul>
+                      {groupedSeries.dessins.map((serie) => (
+                        <li key={serie.slug}>
+                          <a
+                            href={`/series/${serie.slug}`}
+                            className={`work ${
+                              isPathActive(`/series/${serie.slug}`)
+                                ? "active"
+                                : ""
+                            }`}
+                            onMouseEnter={() =>
+                              preloadPage(`/series/${serie.slug}`)
+                            }
+                          >
+                            {serie.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
-                ))}
+                )}
               </ul>
             )}
           </li>

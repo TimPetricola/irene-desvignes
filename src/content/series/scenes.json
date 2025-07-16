@@ -1,6 +1,7 @@
 {
-  "name": "Rouge À Coeur",
+  "name": "Scènes",
   "order": 1,
+  "category": "peintures",
   "images": [
     [
       1,
@@ -12,12 +13,14 @@
       5,
       6
     ],
+    [],
     [
       7,
       8,
       9,
       10
     ],
+    [],
     [
       11,
       12,
