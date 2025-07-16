@@ -23,6 +23,7 @@ interface NavigationProps {
   };
 }
 
+<<<<<<< HEAD
 const Navigation: React.FC<NavigationProps> = ({
   currentPath,
   groupedSeries,
@@ -36,10 +37,23 @@ const Navigation: React.FC<NavigationProps> = ({
 
   const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
     currentPath.startsWith("/series")
+=======
+const Navigation: React.FC<NavigationProps> = ({ currentPath, groupedSeries }) => {
+  const [isPeinturesNavOpen, setIsPeinturesNavOpen] = useState(
+    currentPath.startsWith("/series") && 
+    groupedSeries.peintures.some(s => currentPath === `/series/${s.slug}`)
+  );
+  const [isDessinsNavOpen, setIsDessinsNavOpen] = useState(
+    currentPath.startsWith("/series") && 
+    groupedSeries.dessins.some(s => currentPath === `/series/${s.slug}`)
+>>>>>>> 85a6444 (more)
   );
 
   useEffect(() => {
-    if (!currentPath.startsWith("/series")) setIsSeriesNavOpen(false);
+    if (!currentPath.startsWith("/series")) {
+      setIsPeinturesNavOpen(false);
+      setIsDessinsNavOpen(false);
+    }
   }, [currentPath]);
 
   return (
@@ -65,16 +79,17 @@ const Navigation: React.FC<NavigationProps> = ({
           <li>
             <a
               href="/series"
-              className={currentPath.startsWith("/series") ? "active" : ""}
+              className={isPeinturesNavOpen ? "active" : ""}
               onClick={(e) => {
                 e.preventDefault();
-                setIsSeriesNavOpen(!isSeriesNavOpen);
+                setIsPeinturesNavOpen(!isPeinturesNavOpen);
               }}
             >
-              Oeuvres
+              Peintures
             </a>
-            {isSeriesNavOpen && (
+            {isPeinturesNavOpen && (
               <ul>
+<<<<<<< HEAD
                 <li>
                   <span className="category-title">Peintures</span>
                   <ul>
@@ -119,11 +134,59 @@ const Navigation: React.FC<NavigationProps> = ({
                         </li>
                       ))}
                     </ul>
+=======
+                {groupedSeries.peintures.map((serie) => (
+                  <li key={serie.slug}>
+                    <a
+                      href={`/series/${serie.slug}`}
+                      className={`work ${
+                        currentPath === `/series/${serie.slug}`
+                          ? "active"
+                          : ""
+                      }`}
+                      onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
+                    >
+                      {serie.name}
+                    </a>
+>>>>>>> 85a6444 (more)
                   </li>
-                )}
+                ))}
               </ul>
             )}
           </li>
+          {groupedSeries.dessins.length > 0 && (
+            <li>
+              <a
+                href="/series"
+                className={isDessinsNavOpen ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsDessinsNavOpen(!isDessinsNavOpen);
+                }}
+              >
+                Dessins
+              </a>
+              {isDessinsNavOpen && (
+                <ul>
+                  {groupedSeries.dessins.map((serie) => (
+                    <li key={serie.slug}>
+                      <a
+                        href={`/series/${serie.slug}`}
+                        className={`work ${
+                          currentPath === `/series/${serie.slug}`
+                            ? "active"
+                            : ""
+                        }`}
+                        onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
+                      >
+                        {serie.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          )}
           <li>
             <a
               href="/press"
