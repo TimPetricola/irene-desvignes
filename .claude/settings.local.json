@@ -13,7 +13,11 @@
       "Bash(npx tsx:*)",
       "mcp__ide__getDiagnostics",
       "Bash(find:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(for i in {1..23})",
+      "Bash(do touch \"/Users/tim/Projects/irene-desvignes/src/images/series/flux-roses/$i.jpg\")",
+      "Bash(done)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }
