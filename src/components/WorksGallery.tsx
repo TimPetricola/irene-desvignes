@@ -20,16 +20,25 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
     src: processedImages?.[image.toString()]?.full || `/images/works/${serie.slug}/${image}.jpg`,
   }));
 
-  const handleImageClick = (rowIndex: number, imageIndex: number) => {
-    // Calculate the flat index
+  const calculateFlatIndex = (rowIndex: number, imageIndex: number) => {
     let flatIndex = 0;
     for (let i = 0; i < rowIndex; i++) {
       flatIndex += serie.images[i].length;
     }
-    flatIndex += imageIndex;
-    
+    return flatIndex + imageIndex;
+  };
+
+  const handleImageClick = (rowIndex: number, imageIndex: number) => {
+    const flatIndex = calculateFlatIndex(rowIndex, imageIndex);
     setPhotoIndex(flatIndex);
     setIsOpen(true);
+  };
+
+  const handleImageMouseEnter = (rowIndex: number, imageIndex: number) => {
+    const flatIndex = calculateFlatIndex(rowIndex, imageIndex);
+    const fullImageSrc = allImages[flatIndex].src;
+    const img = new Image();
+    img.src = fullImageSrc;
   };
 
   return (
@@ -45,6 +54,7 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
                 e.preventDefault();
                 handleImageClick(rowIndex, imageIndex);
               }}
+              onMouseEnter={() => handleImageMouseEnter(rowIndex, imageIndex)}
             >
               <img
                 src={processedImages?.[image.toString()]?.thumb || `/images/works/${serie.slug}/thumbs/${image}.jpg`}
