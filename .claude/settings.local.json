@@ -17,7 +17,15 @@
       "Bash(for i in {1..23})",
       "Bash(do touch \"/Users/tim/Projects/irene-desvignes/src/images/series/flux-roses/$i.jpg\")",
       "Bash(done)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(ls:*)",
+      "Bash(for i in *.jpg)",
+      "Bash(do cp \"$i\" \"/Users/tim/Projects/irene-desvignes/public/images/works/iles/lago-verde-$i\")",
+      "Bash(do cp \"$i\" \"/Users/tim/Projects/irene-desvignes/public/images/works/iles/isola-lobos-$i\")",
+      "Bash(do cp \"$i\" \"/Users/tim/Projects/irene-desvignes/public/images/works/iles/paysages-lanzarote-$i\")",
+      "Bash(do cp \"$i\" \"/Users/tim/Projects/irene-desvignes/public/images/works/iles/ilots-zen-$i\")",
+      "Bash(do cp \"$i\" \"/Users/tim/Projects/irene-desvignes/public/images/works/iles/petits-volcans-apprivoises-$i\")",
+      "Bash(mv:*)"
     ],
     "deny": []
   }
