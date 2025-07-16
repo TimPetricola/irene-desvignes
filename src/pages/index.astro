@@ -1,11 +1,19 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import homeImage from "../images/series/rouge-a-coeur/1.jpg";
 ---
 
 <BaseLayout>
   <section id="home">
     <div class="center">
-      <img src="/images/works/rouge-a-coeur/1.jpg" />
+      <Image
+        src={homeImage}
+        alt="Rouge À Coeur"
+        width={550}
+        height={550}
+        quality={90}
+      />
     </div>
   </section>
 </BaseLayout>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import WorksGallery from '../../components/WorksGallery';
+import WorksGalleryWrapper from '../../components/WorksGalleryWrapper.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -17,6 +17,6 @@ const { serie } = Astro.props;
 <BaseLayout>
   <section>
     <div class="works-list"></div>
-    <WorksGallery serie={serie} client:load />
+    <WorksGalleryWrapper serie={serie} />
   </section>
 </BaseLayout>

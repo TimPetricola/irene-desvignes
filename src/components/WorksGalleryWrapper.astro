@@ -1,0 +1,57 @@
+---
+import { getImage } from 'astro:assets';
+import WorksGallery from './WorksGallery';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  serie: {
+    slug: string;
+    name: string;
+    images: (number | string)[][];
+  };
+}
+
+const { serie } = Astro.props;
+
+// Import all images for this series
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/images/series/**/*.{jpeg,jpg,png,gif,webp}',
+  { eager: true }
+);
+
+// Process images to get optimized URLs
+const processedImages: Record<string, { thumb: string; full: string }> = {};
+
+for (const row of serie.images) {
+  for (const imageNum of row) {
+    const imagePath = `/src/images/series/${serie.slug}/${imageNum}.jpg`;
+    if (images[imagePath]) {
+      const imageModule = images[imagePath];
+      
+      // Generate optimized versions
+      const thumbImage = await getImage({
+        src: imageModule.default,
+        width: 122,
+        height: 122,
+        format: 'webp',
+        quality: 80,
+        fit: 'cover'
+      });
+      
+      const fullImage = await getImage({
+        src: imageModule.default,
+        width: 850,
+        format: 'webp',
+        quality: 90
+      });
+      
+      processedImages[imageNum.toString()] = {
+        thumb: thumbImage.src,
+        full: fullImage.src
+      };
+    }
+  }
+}
+---
+
+<WorksGallery serie={serie} processedImages={processedImages} client:load />

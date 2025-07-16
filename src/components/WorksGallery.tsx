@@ -8,15 +8,16 @@ interface Props {
     name: string;
     images: (number | string)[][];
   };
+  processedImages?: Record<string, { thumb: string; full: string }>;
 }
 
-const WorksGallery: React.FC<Props> = ({ serie }) => {
+const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
   // Flatten the images array for the lightbox
   const allImages = serie.images.flat().map((image) => ({
-    src: `/images/works/${serie.slug}/${image}.jpg`,
+    src: processedImages?.[image.toString()]?.full || `/images/works/${serie.slug}/${image}.jpg`,
   }));
 
   const handleImageClick = (rowIndex: number, imageIndex: number) => {
@@ -46,7 +47,7 @@ const WorksGallery: React.FC<Props> = ({ serie }) => {
               }}
             >
               <img
-                src={`/images/works/${serie.slug}/thumbs/${image}.jpg`}
+                src={processedImages?.[image.toString()]?.thumb || `/images/works/${serie.slug}/thumbs/${image}.jpg`}
                 className="works-list-img"
                 alt=""
               />
