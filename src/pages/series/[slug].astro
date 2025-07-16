@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WorksGallery from '../../components/WorksGallery';
-import artworks from '../../artworks';
+import { getCollection } from 'astro:content';
 
-export function getStaticPaths() {
-  return artworks.series.map((serie) => ({
-    params: { slug: serie.slug },
-    props: { serie },
+export async function getStaticPaths() {
+  const series = await getCollection('series');
+  return series.map((entry) => ({
+    params: { slug: entry.id },
+    props: { serie: { slug: entry.id, ...entry.data } },
   }));
 }
 

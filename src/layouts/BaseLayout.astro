@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/Navigation";
+import { getCollection } from 'astro:content';
 import "../styles/application.sass";
 
 export interface Props {
@@ -8,6 +9,14 @@ export interface Props {
 
 const { title = 'Irène Desvignes' } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+const seriesEntries = await getCollection('series');
+const series = seriesEntries
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(entry => ({
+    slug: entry.id,
+    name: entry.data.name,
+  }));
 ---
 
 <!DOCTYPE html>
@@ -20,7 +29,7 @@ const currentPath = Astro.url.pathname;
   </head>
   <body>
     <div id="container">
-      <Navigation currentPath={currentPath} client:load />
+      <Navigation currentPath={currentPath} series={series} client:load />
       <main id="main">
         <slot />
       </main>

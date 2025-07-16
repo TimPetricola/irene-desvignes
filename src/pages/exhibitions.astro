@@ -1,14 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Table, { EXHIBITIONS } from '../components/ExhibitionsTable';
+import { getCollection } from 'astro:content';
+
+const exhibitions = await getCollection('exhibitions');
+const individualExhibitions = exhibitions
+  .filter((ex) => ex.data.type === 'individual')
+  .map((ex) => ex.data)
+  .sort((a, b) => b.year - a.year || b.month.localeCompare(a.month));
+const groupExhibitions = exhibitions
+  .filter((ex) => ex.data.type === 'group')
+  .map((ex) => ex.data)
+  .sort((a, b) => b.year - a.year || b.month.localeCompare(a.month));
 ---
 
 <BaseLayout>
   <section>
     <h3>Expos personnelles</h3>
-    <Table exhibitions={EXHIBITIONS.INDIVIDUAL} client:load />
+    <table class="expos">
+      {individualExhibitions.map((expo) => (
+        <tr>
+          <td>{expo.month}</td>
+          <td>{expo.year}</td>
+          <td style="width: 100%; padding-left: 20px">{expo.location}</td>
+        </tr>
+      ))}
+    </table>
 
     <h3>Expos collectives</h3>
-    <Table exhibitions={EXHIBITIONS.GROUP} client:load />
+    <table class="expos">
+      {groupExhibitions.map((expo) => (
+        <tr>
+          <td>{expo.month}</td>
+          <td>{expo.year}</td>
+          <td style="width: 100%; padding-left: 20px">{expo.location}</td>
+        </tr>
+      ))}
+    </table>
   </section>
 </BaseLayout>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import artworks from "../artworks";
 
 const preloadPage = (url: string) => {
   const link = document.createElement("link");
@@ -10,9 +9,13 @@ const preloadPage = (url: string) => {
 
 interface NavigationProps {
   currentPath: string;
+  series: Array<{
+    slug: string;
+    name: string;
+  }>;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
+const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
   const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
     currentPath.startsWith("/series")
   );
@@ -54,7 +57,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
             </a>
             {isSeriesNavOpen && (
               <ul>
-                {artworks.series.map((serie) => (
+                {series.map((serie) => (
                   <li key={serie.slug}>
                     <a
                       href={`/series/${serie.slug}`}
