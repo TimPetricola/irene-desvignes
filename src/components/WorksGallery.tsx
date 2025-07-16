@@ -44,7 +44,10 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
   return (
     <>
       {serie.images.map((row, rowIndex) => (
-        <div key={rowIndex}>
+        <div 
+          key={rowIndex} 
+          className={row.length === 0 ? "spacing-row" : ""}
+        >
           {row.map((image, imageIndex) => (
             <a
               href="#"
