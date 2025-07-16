@@ -16,7 +16,13 @@ const series = seriesEntries
   .map(entry => ({
     slug: entry.id,
     name: entry.data.name,
+    category: entry.data.category || 'peintures',
   }));
+
+const groupedSeries = {
+  peintures: series.filter(s => s.category === 'peintures'),
+  dessins: series.filter(s => s.category === 'dessins'),
+};
 ---
 
 <!DOCTYPE html>
@@ -29,7 +35,7 @@ const series = seriesEntries
   </head>
   <body>
     <div id="container">
-      <Navigation currentPath={currentPath} series={series} client:load />
+      <Navigation currentPath={currentPath} groupedSeries={groupedSeries} client:load />
       <main id="main">
         <slot />
       </main>
