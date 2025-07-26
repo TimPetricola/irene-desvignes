@@ -50,7 +50,7 @@ table ul
   @media (max-width: $mobile)
     float: none
     width: 100% !important
-    margin: 0 !important
+    margin-right: 0 !important
 
 #sidebar
   width: 300px
@@ -59,8 +59,12 @@ table ul
   color: #000
 
   @media (max-width: $mobile)
-    text-align: center
-    margin-bottom: 30px
+    text-align: left
+    margin-bottom: 20px
+    margin-right: 0
+    padding: 15px
+    background: rgba(0, 0, 0, 0.15)
+    border-radius: 8px
     
   a
     color: #000
@@ -71,13 +75,14 @@ table ul
   
   @media (max-width: $mobile)
     height: auto
-    margin-bottom: 20px
+    margin-bottom: 15px
+    text-align: center
     
   a
     font-size: 29px
 
     @media (max-width: $mobile)
-      font-size: 24px
+      font-size: 22px
 
     .firstname
       color: #fff
@@ -91,18 +96,15 @@ table ul
     padding: 2px 0
 
     @media (max-width: $mobile)
-      display: inline-block
-      margin: 5px
-      padding: 5px 10px
-      background: rgba(255, 255, 255, 0.1)
-      border-radius: 3px
+      display: block
+      margin: 0
+      padding: 0
 
     ul
       margin: 10px 0 0 0
 
       @media (max-width: $mobile)
-        margin: 15px 0
-        text-align: center
+        margin: 10px 0 0 20px
 
   .main > li
     font-size: 20px
@@ -110,21 +112,28 @@ table ul
     border-bottom: 1px solid #819393
 
     @media (max-width: $mobile)
-      border-bottom: none
-      padding: 5px
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      padding: 12px 0
       font-size: 16px
 
     & li
       margin-bottom: 5px
 
       @media (max-width: $mobile)
-        margin: 5px
+        margin: 8px 0
         font-size: 14px
+        padding: 4px 0
 
   a
     color: #303d3d
     &.active
       color: #000
+
+    @media (max-width: $mobile)
+      color: #fff
+      &.active
+        color: #FFD700
+        font-weight: bold
 
 #main
   margin-top: 50px
