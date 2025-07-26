@@ -39,32 +39,30 @@ table ul
   margin: 5% auto 0 auto
   padding: 0 20px
   box-sizing: border-box
+  display: flex
+  gap: 40px
 
   @media (max-width: $mobile)
     margin: 2% auto 0 auto
     padding: 0 15px
-
-#sidebar, #main
-  float: left
-
-  @media (max-width: $mobile)
-    float: none
-    width: 100% !important
-    margin-right: 0 !important
+    display: block
+    gap: 0
 
 #sidebar
-  width: 300px
-  margin-right: 40px
+  flex: 0 0 300px
   text-align: right
   color: #000
 
   @media (max-width: $mobile)
+    flex: none
+    width: 100%
     text-align: left
     margin-bottom: 20px
-    margin-right: 0
     padding: 15px
     background: rgba(0, 0, 0, 0.15)
     border-radius: 8px
+    box-sizing: border-box
+    overflow-x: hidden
     
   a
     color: #000
@@ -82,7 +80,7 @@ table ul
     font-size: 29px
 
     @media (max-width: $mobile)
-      font-size: 22px
+      font-size: 20px
 
     .firstname
       color: #fff
@@ -104,7 +102,7 @@ table ul
       margin: 10px 0 0 0
 
       @media (max-width: $mobile)
-        margin: 10px 0 0 20px
+        margin: 8px 0 0 15px
 
   .main > li
     font-size: 20px
@@ -113,16 +111,16 @@ table ul
 
     @media (max-width: $mobile)
       border-bottom: 1px solid rgba(255, 255, 255, 0.2)
-      padding: 12px 0
-      font-size: 16px
+      padding: 10px 0
+      font-size: 14px
 
     & li
       margin-bottom: 5px
 
       @media (max-width: $mobile)
-        margin: 8px 0
-        font-size: 14px
-        padding: 4px 0
+        margin: 6px 0
+        font-size: 13px
+        padding: 2px 0
 
   a
     color: #303d3d
@@ -132,16 +130,15 @@ table ul
     @media (max-width: $mobile)
       color: #fff
       &.active
-        color: #FFD700
+        color: #000
         font-weight: bold
 
 #main
+  flex: 1
   margin-top: 50px
-  width: 590px
 
   @media (max-width: $mobile)
     margin-top: 20px
-    width: 100%
 
 #home
   img
