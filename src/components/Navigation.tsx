@@ -23,30 +23,23 @@ interface NavigationProps {
   };
 }
 
-<<<<<<< HEAD
 const Navigation: React.FC<NavigationProps> = ({
   currentPath,
   groupedSeries,
 }) => {
-  // Helper function to check if a path matches (handles trailing slashes)
   const isPathActive = (expectedPath: string) => {
     const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
     const normalizedExpected = expectedPath.replace(/\/$/, "") || "/";
     return normalizedCurrent === normalizedExpected;
   };
 
-  const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
-    currentPath.startsWith("/series")
-=======
-const Navigation: React.FC<NavigationProps> = ({ currentPath, groupedSeries }) => {
   const [isPeinturesNavOpen, setIsPeinturesNavOpen] = useState(
-    currentPath.startsWith("/series") && 
-    groupedSeries.peintures.some(s => currentPath === `/series/${s.slug}`)
+    currentPath.startsWith("/series") &&
+      groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
   );
   const [isDessinsNavOpen, setIsDessinsNavOpen] = useState(
-    currentPath.startsWith("/series") && 
-    groupedSeries.dessins.some(s => currentPath === `/series/${s.slug}`)
->>>>>>> 85a6444 (more)
+    currentPath.startsWith("/series") &&
+      groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
   );
 
   useEffect(() => {
@@ -89,66 +82,17 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, groupedSeries }) =
             </a>
             {isPeinturesNavOpen && (
               <ul>
-<<<<<<< HEAD
-                <li>
-                  <span className="category-title">Peintures</span>
-                  <ul>
-                    {groupedSeries.peintures.map((serie) => (
-                      <li key={serie.slug}>
-                        <a
-                          href={`/series/${serie.slug}`}
-                          className={`work ${
-                            isPathActive(`/series/${serie.slug}`)
-                              ? "active"
-                              : ""
-                          }`}
-                          onMouseEnter={() =>
-                            preloadPage(`/series/${serie.slug}`)
-                          }
-                        >
-                          {serie.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-                {groupedSeries.dessins.length > 0 && (
-                  <li>
-                    <span className="category-title">Dessins</span>
-                    <ul>
-                      {groupedSeries.dessins.map((serie) => (
-                        <li key={serie.slug}>
-                          <a
-                            href={`/series/${serie.slug}`}
-                            className={`work ${
-                              isPathActive(`/series/${serie.slug}`)
-                                ? "active"
-                                : ""
-                            }`}
-                            onMouseEnter={() =>
-                              preloadPage(`/series/${serie.slug}`)
-                            }
-                          >
-                            {serie.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-=======
                 {groupedSeries.peintures.map((serie) => (
                   <li key={serie.slug}>
                     <a
                       href={`/series/${serie.slug}`}
                       className={`work ${
-                        currentPath === `/series/${serie.slug}`
-                          ? "active"
-                          : ""
+                        isPathActive(`/series/${serie.slug}`) ? "active" : ""
                       }`}
                       onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
                     >
                       {serie.name}
                     </a>
->>>>>>> 85a6444 (more)
                   </li>
                 ))}
               </ul>
@@ -177,7 +121,9 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, groupedSeries }) =
                             ? "active"
                             : ""
                         }`}
-                        onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
+                        onMouseEnter={() =>
+                          preloadPage(`/series/${serie.slug}`)
+                        }
                       >
                         {serie.name}
                       </a>
