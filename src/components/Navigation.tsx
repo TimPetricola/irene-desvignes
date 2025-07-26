@@ -16,6 +16,13 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
+  // Helper function to check if a path matches (handles trailing slashes)
+  const isPathActive = (expectedPath: string) => {
+    const normalizedCurrent = currentPath.replace(/\/$/, '') || '/';
+    const normalizedExpected = expectedPath.replace(/\/$/, '') || '/';
+    return normalizedCurrent === normalizedExpected;
+  };
+
   const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
     currentPath.startsWith("/series")
   );
@@ -38,7 +45,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/"
-              className={currentPath === "/" ? "active" : ""}
+              className={isPathActive("/") ? "active" : ""}
               onMouseEnter={() => preloadPage("/")}
             >
               Intro
@@ -62,7 +69,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
                     <a
                       href={`/series/${serie.slug}`}
                       className={`work ${
-                        currentPath === `/series/${serie.slug}`
+                        isPathActive(`/series/${serie.slug}`)
                           ? "active"
                           : ""
                       }`}
@@ -78,7 +85,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/press"
-              className={currentPath === "/press" ? "active" : ""}
+              className={isPathActive("/press") ? "active" : ""}
               onMouseEnter={() => preloadPage("/press")}
             >
               Presse
@@ -87,7 +94,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/exhibitions"
-              className={currentPath === "/exhibitions" ? "active" : ""}
+              className={isPathActive("/exhibitions") ? "active" : ""}
               onMouseEnter={() => preloadPage("/exhibitions")}
             >
               Expos
@@ -96,7 +103,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/background"
-              className={currentPath === "/background" ? "active" : ""}
+              className={isPathActive("/background") ? "active" : ""}
               onMouseEnter={() => preloadPage("/background")}
             >
               Formation
@@ -105,7 +112,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/contact"
-              className={currentPath === "/contact" ? "active" : ""}
+              className={isPathActive("/contact") ? "active" : ""}
               onMouseEnter={() => preloadPage("/contact")}
             >
               Contact
