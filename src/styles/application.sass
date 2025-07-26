@@ -1,5 +1,10 @@
 @use 'reset'
 
+// Responsive breakpoints
+$mobile: 768px
+$tablet: 1024px
+$desktop: 1200px
+
 body
   background: #587171
   color: #fff
@@ -29,26 +34,53 @@ table ul
   width: 100px
 
 #container
-  width: 930px
+  max-width: 930px
+  width: 100%
   margin: 5% auto 0 auto
+  padding: 0 20px
+  box-sizing: border-box
+  display: flex
+  gap: 40px
 
-#sidebar, #main
-  float: left
+  @media (max-width: $mobile)
+    margin: 2% auto 0 auto
+    padding: 0 15px
+    display: block
+    gap: 0
 
 #sidebar
-  width: 300px
-  margin:
-    right: 40px
+  flex: 0 0 300px
   text-align: right
   color: #000
+
+  @media (max-width: $mobile)
+    flex: none
+    width: 100%
+    text-align: left
+    margin-bottom: 20px
+    padding: 15px 25px 15px 15px
+    background: rgba(0, 0, 0, 0.15)
+    border-radius: 8px
+    box-sizing: border-box
+    overflow-x: hidden
+    
   a
     color: #000
 
 #header
   font-weight: normal
   height: 40px
+  
+  @media (max-width: $mobile)
+    height: auto
+    margin-bottom: 15px
+    text-align: center
+    
   a
     font-size: 29px
+
+    @media (max-width: $mobile)
+      font-size: 20px
 
     .firstname
       color: #fff
@@ -61,31 +93,64 @@ table ul
     font-size: 15px
     padding: 2px 0
 
+    @media (max-width: $mobile)
+      display: block
+      margin: 0
+      padding: 0
+
     ul
       margin: 10px 0 0 0
+
+      @media (max-width: $mobile)
+        margin: 8px 0 0 15px
 
   .main > li
     font-size: 20px
     padding: 10px 0
     border-bottom: 1px solid #819393
 
+    @media (max-width: $mobile)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      padding: 10px 0
+      font-size: 14px
+
     & li
       margin-bottom: 5px
+
+      @media (max-width: $mobile)
+        margin: 6px 0
+        font-size: 13px
+        padding: 2px 0
 
   a
     color: #303d3d
     &.active
       color: #000
 
+    @media (max-width: $mobile)
+      color: #fff
+      &.active
+        color: #000
+
 #main
+  flex: 1
   margin-top: 50px
-  width: 590px
+
+  @media (max-width: $mobile)
+    margin-top: 20px
 
 #home
   img
-    margin:
-      left: 15px
-      bottom: 15px
+    margin-left: 15px
+    margin-bottom: 15px
+    max-width: 100%
+    height: auto
+
+    @media (max-width: $mobile)
+      margin: 0 auto 15px auto
+      display: block
+      max-width: 90%
+
   iframe
     margin: auto
 
@@ -94,11 +159,43 @@ table ul
   max-width: 120px
   border: 1px solid #C9CBAB
 
+  @media (max-width: $mobile)
+    max-height: 80px
+    max-width: 80px
+
 .works-list-thumb
   margin: 5px 2px
+  display: inline-block
+
+  @media (max-width: $mobile)
+    margin: 2px
+    
+    // Center gallery thumbnails on mobile
+    &:nth-child(even)
+      margin-right: 5px
 
 .lead
   text-align: center
   background-color: rgba(#fff, .05)
   padding: 20px
   font-size: 16px
+
+  @media (max-width: $mobile)
+    padding: 15px
+    font-size: 14px
+
+// Additional mobile optimizations
+@media (max-width: $mobile)
+  body
+    font-size: 13px
+    line-height: 16px
+
+  .center
+    text-align: center
+
+  // Ensure tables are responsive
+  table
+    width: 100%
+    overflow-x: auto
+    display: block
+    white-space: nowrap
