@@ -34,12 +34,10 @@ const Navigation: React.FC<NavigationProps> = ({
   };
 
   const [isPeinturesNavOpen, setIsPeinturesNavOpen] = useState(
-    currentPath.startsWith("/series") &&
-      groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
+    groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
   );
   const [isDessinsNavOpen, setIsDessinsNavOpen] = useState(
-    currentPath.startsWith("/series") &&
-      groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
+    groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
   );
 
   useEffect(() => {
