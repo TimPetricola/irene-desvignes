@@ -34,20 +34,26 @@ const Navigation: React.FC<NavigationProps> = ({
   };
 
   const [isPeinturesNavOpen, setIsPeinturesNavOpen] = useState(
-    currentPath.startsWith("/series") &&
-      groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
+    groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
   );
   const [isDessinsNavOpen, setIsDessinsNavOpen] = useState(
-    currentPath.startsWith("/series") &&
-      groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
+    groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
   );
 
   useEffect(() => {
-    if (!currentPath.startsWith("/series")) {
+    if (currentPath.startsWith("/series")) {
+      // Keep the appropriate submenu open based on current series
+      const isPeintureActive = groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`);
+      const isDessinActive = groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`);
+      
+      setIsPeinturesNavOpen(isPeintureActive);
+      setIsDessinsNavOpen(isDessinActive);
+    } else {
+      // Close all submenus when not on a series page
       setIsPeinturesNavOpen(false);
       setIsDessinsNavOpen(false);
     }
-  }, [currentPath]);
+  }, [currentPath, groupedSeries]);
 
   return (
     <aside id="sidebar">
