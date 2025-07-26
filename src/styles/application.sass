@@ -87,8 +87,6 @@ table ul
       font-style: italic
 
 #navigation
-
-
   li
     display: block
     text-transform: uppercase
@@ -149,6 +147,7 @@ table ul
 
   @media (max-width: $mobile)
     margin-top: 20px
+    max-width: 100%
 
 #home
   img
@@ -167,26 +166,40 @@ table ul
 
 .works-list-img
   max-height: 120px
-  max-width: 120px
+  width: 120px
+  height: auto
   border: 1px solid #C9CBAB
+  display: block
+  flex-shrink: 1
 
   @media (max-width: $mobile)
-    max-height: 80px
-    max-width: 80px
+    max-height: 120px
+    width: 120px
+    height: auto
+    display: block
+    flex-shrink: 1
 
 .works-list-thumb
-  margin: 5px 2px
-  display: inline-block
+  display: flex
+  flex-shrink: 1
+  min-width: 0
 
   @media (max-width: $mobile)
-    margin: 2px
-
-    // Center gallery thumbnails on mobile
-    &:nth-child(even)
-      margin-right: 5px
+    display: flex
+    flex-shrink: 1
+    min-width: 0
 
 .spacing-row
   height: 30px
+
+// Gallery row container styles - use flexbox for proper wrapping
+div:has(.works-list-thumb),
+.works-gallery-container
+  display: flex
+  flex-wrap: wrap
+  gap: 4px
+  align-items: flex-start
+  margin-bottom: 10px
 
 .lead
   text-align: center
