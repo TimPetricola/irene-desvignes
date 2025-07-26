@@ -63,19 +63,19 @@ table ul
     border-radius: 8px
     box-sizing: border-box
     overflow-x: hidden
-    
+
   a
     color: #000
 
 #header
   font-weight: normal
   height: 40px
-  
+
   @media (max-width: $mobile)
     height: auto
     margin-bottom: 15px
     text-align: center
-    
+
   a
     font-size: 29px
 
@@ -87,6 +87,8 @@ table ul
       font-style: italic
 
 #navigation
+
+
   li
     display: block
     text-transform: uppercase
@@ -103,6 +105,13 @@ table ul
 
       @media (max-width: $mobile)
         margin: 8px 0 0 15px
+
+  ul
+    padding-left: 40px
+
+    @media (max-width: $mobile)
+      padding-left: 10px
+      padding-right: 10px
 
   .main > li
     font-size: 20px
@@ -135,6 +144,8 @@ table ul
 #main
   flex: 1
   margin-top: 50px
+  margin-bottom: 50px
+  width: 590px
 
   @media (max-width: $mobile)
     margin-top: 20px
@@ -169,10 +180,13 @@ table ul
 
   @media (max-width: $mobile)
     margin: 2px
-    
+
     // Center gallery thumbnails on mobile
     &:nth-child(even)
       margin-right: 5px
+
+.spacing-row
+  height: 30px
 
 .lead
   text-align: center

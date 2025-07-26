@@ -9,26 +9,44 @@ const preloadPage = (url: string) => {
 
 interface NavigationProps {
   currentPath: string;
-  series: Array<{
-    slug: string;
-    name: string;
-  }>;
+  groupedSeries: {
+    peintures: Array<{
+      slug: string;
+      name: string;
+      category: string;
+    }>;
+    dessins: Array<{
+      slug: string;
+      name: string;
+      category: string;
+    }>;
+  };
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
-  // Helper function to check if a path matches (handles trailing slashes)
+const Navigation: React.FC<NavigationProps> = ({
+  currentPath,
+  groupedSeries,
+}) => {
   const isPathActive = (expectedPath: string) => {
-    const normalizedCurrent = currentPath.replace(/\/$/, '') || '/';
-    const normalizedExpected = expectedPath.replace(/\/$/, '') || '/';
+    const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+    const normalizedExpected = expectedPath.replace(/\/$/, "") || "/";
     return normalizedCurrent === normalizedExpected;
   };
 
-  const [isSeriesNavOpen, setIsSeriesNavOpen] = useState(
-    currentPath.startsWith("/series")
+  const [isPeinturesNavOpen, setIsPeinturesNavOpen] = useState(
+    currentPath.startsWith("/series") &&
+      groupedSeries.peintures.some((s) => currentPath === `/series/${s.slug}`)
+  );
+  const [isDessinsNavOpen, setIsDessinsNavOpen] = useState(
+    currentPath.startsWith("/series") &&
+      groupedSeries.dessins.some((s) => currentPath === `/series/${s.slug}`)
   );
 
   useEffect(() => {
-    if (!currentPath.startsWith("/series")) setIsSeriesNavOpen(false);
+    if (!currentPath.startsWith("/series")) {
+      setIsPeinturesNavOpen(false);
+      setIsDessinsNavOpen(false);
+    }
   }, [currentPath]);
 
   return (
@@ -54,24 +72,22 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
           <li>
             <a
               href="/series"
-              className={currentPath.startsWith("/series") ? "active" : ""}
+              className={isPeinturesNavOpen ? "active" : ""}
               onClick={(e) => {
                 e.preventDefault();
-                setIsSeriesNavOpen(!isSeriesNavOpen);
+                setIsPeinturesNavOpen(!isPeinturesNavOpen);
               }}
             >
-              Oeuvres
+              Peintures
             </a>
-            {isSeriesNavOpen && (
+            {isPeinturesNavOpen && (
               <ul>
-                {series.map((serie) => (
+                {groupedSeries.peintures.map((serie) => (
                   <li key={serie.slug}>
                     <a
                       href={`/series/${serie.slug}`}
                       className={`work ${
-                        isPathActive(`/series/${serie.slug}`)
-                          ? "active"
-                          : ""
+                        isPathActive(`/series/${serie.slug}`) ? "active" : ""
                       }`}
                       onMouseEnter={() => preloadPage(`/series/${serie.slug}`)}
                     >
@@ -82,6 +98,41 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, series }) => {
               </ul>
             )}
           </li>
+          {groupedSeries.dessins.length > 0 && (
+            <li>
+              <a
+                href="/series"
+                className={isDessinsNavOpen ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsDessinsNavOpen(!isDessinsNavOpen);
+                }}
+              >
+                Dessins
+              </a>
+              {isDessinsNavOpen && (
+                <ul>
+                  {groupedSeries.dessins.map((serie) => (
+                    <li key={serie.slug}>
+                      <a
+                        href={`/series/${serie.slug}`}
+                        className={`work ${
+                          currentPath === `/series/${serie.slug}`
+                            ? "active"
+                            : ""
+                        }`}
+                        onMouseEnter={() =>
+                          preloadPage(`/series/${serie.slug}`)
+                        }
+                      >
+                        {serie.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          )}
           <li>
             <a
               href="/press"

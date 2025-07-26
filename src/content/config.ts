@@ -16,6 +16,7 @@ const series = defineCollection({
     name: z.string(),
     images: z.array(z.array(z.union([z.number(), z.string()]))),
     order: z.number(),
+    category: z.enum(['peintures', 'dessins']).optional(),
   }),
 });
 
