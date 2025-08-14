@@ -17,7 +17,9 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
 
   // Flatten the images array for the lightbox
   const allImages = serie.images.flat().map((image) => ({
-    src: processedImages?.[image.toString()]?.full || `/images/works/${serie.slug}/${image}.jpg`,
+    src:
+      processedImages?.[image.toString()]?.full ||
+      `/images/works/${serie.slug}/${image}.jpg`,
   }));
 
   const calculateFlatIndex = (rowIndex: number, imageIndex: number) => {
@@ -44,10 +46,7 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
   return (
     <>
       {serie.images.map((row, rowIndex) => (
-        <div 
-          key={rowIndex} 
-          className={row.length === 0 ? "spacing-row" : ""}
-        >
+        <div key={rowIndex} className={row.length === 0 ? "spacing-row" : ""}>
           {row.map((image, imageIndex) => (
             <a
               href="#"
@@ -60,7 +59,10 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
               onMouseEnter={() => handleImageMouseEnter(rowIndex, imageIndex)}
             >
               <img
-                src={processedImages?.[image.toString()]?.thumb || `/images/works/${serie.slug}/thumbs/${image}.jpg`}
+                src={
+                  processedImages?.[image.toString()]?.thumb ||
+                  `/images/works/${serie.slug}/thumbs/${image}.jpg`
+                }
                 className="works-list-img"
                 alt=""
               />
@@ -68,14 +70,20 @@ const WorksGallery: React.FC<Props> = ({ serie, processedImages }) => {
           ))}
         </div>
       ))}
-      
+
       <Lightbox
         open={isOpen}
         close={() => setIsOpen(false)}
         slides={allImages}
         index={photoIndex}
         styles={{
-          container: { backgroundColor: "#587171" },
+          container: { backgroundColor: "#fff" },
+          icon: {
+            color: "#303d3d",
+          },
+          button: {
+            filter: "none",
+          },
         }}
       />
     </>
